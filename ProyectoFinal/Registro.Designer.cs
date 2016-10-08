@@ -84,7 +84,6 @@
             this.Tipos_ConmoBox.Name = "Tipos_ConmoBox";
             this.Tipos_ConmoBox.Size = new System.Drawing.Size(121, 21);
             this.Tipos_ConmoBox.TabIndex = 9;
-            this.Tipos_ConmoBox.SelectedIndexChanged += new System.EventHandler(this.Tipos_ConmoBox_SelectedIndexChanged);
             // 
             // Boton_Buscar
             // 

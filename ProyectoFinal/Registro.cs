@@ -120,11 +120,6 @@ namespace ProyectoFinal
             textBox_ID.Clear();
         }
 
-        private void Tipos_ConmoBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          //  type = Tipos_ConmoBox.SelectedValue.ToString();
-        }
-
         BeautyBaseDb db = new BeautyBaseDb();
         private void ListarTipo()
         {
