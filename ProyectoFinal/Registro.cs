@@ -13,16 +13,17 @@ using DAL;
 
 namespace ProyectoFinal
 {
-    public partial class Login : Form
+    public partial class Registro : Form
     {
-        public Login()
+        public Registro()
         {
             InitializeComponent();
+            ListarTipo();
         }
 
         private void Boton_Guardar_Click(object sender, EventArgs e)
         {
-
+            string type = Tipos_ConmoBox.SelectedValue.ToString();
 
             if (string.IsNullOrEmpty(textBox_Nombre.Text) || string.IsNullOrEmpty(textBox_Clave.Text) || string.IsNullOrEmpty(textBox_ID.Text))
             {
@@ -31,39 +32,21 @@ namespace ProyectoFinal
             }
             else
             {
-                   Usuarios user = new Usuarios();
+                Usuarios user = new Usuarios();
 
-                    user.clave = textBox_Clave.Text;
-                    user.nombre = textBox_Nombre.Text;
-                    user.usuarioID = Convert.ToInt32(textBox_ID.Text);
-                  string valor;
+                user.clave = textBox_Clave.Text;
+                user.nombre = textBox_Nombre.Text;
+                user.usuarioID = Convert.ToInt32(textBox_ID.Text);
+                user.tipo = type;
 
-                  if (checkBox_Adm.Checked == true)
-                   {
-                       valor = "Administrador";
-                       user.tipoUsuario = valor;
 
-                       if (UsuariosBll.Insertar(user))
-                       {
-                           MessageBox.Show("Guardado !!");
-                       }
-                   }
-                   else
-                   {
-                       valor = "Empleado";
-                       user.tipoUsuario = valor;
-
-                       if (UsuariosBll.Insertar(user))
-                       {
-                           MessageBox.Show("Guardado !!");
-                       }
-                   } 
-
-                    textBox_Clave.Clear();
-                    textBox_ID.Clear();
-                    textBox_Nombre.Clear();
-                    textBox1.Clear();
-
+                if (UsuariosBll.Insertar(user))
+                {
+                    MessageBox.Show("Guardado !!");
+                }
+                textBox_Clave.Clear();
+                textBox_ID.Clear();
+                textBox_Nombre.Clear();
             }
         }
 
@@ -96,13 +79,13 @@ namespace ProyectoFinal
                                     where c.usuarioID == id
                                     select c.clave).FirstOrDefault();
 
-                    var tipyUser = (from c in db.Usuario
-                                    where c.usuarioID == id
-                                    select c.tipoUsuario).FirstOrDefault();  
-
                     textBox_Nombre.Text = name;
                     textBox_Clave.Text = password;
-                    textBox1.Text = tipyUser;
+
+                    if(name ==null || password == null)
+                    {
+                        MessageBox.Show("Este Usuario no esxiste");
+                    }
 
                 }
                 catch (Exception)
@@ -127,7 +110,6 @@ namespace ProyectoFinal
                 textBox_Clave.Clear();
                 textBox_ID.Clear();
                 textBox_Nombre.Clear();
-                textBox1.Clear();
             }
         }
 
@@ -136,7 +118,27 @@ namespace ProyectoFinal
             textBox_Nombre.Clear();
             textBox_Clave.Clear();
             textBox_ID.Clear();
-            textBox1.Clear();
         }
+
+        private void Tipos_ConmoBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          //  type = Tipos_ConmoBox.SelectedValue.ToString();
+        }
+
+        BeautyBaseDb db = new BeautyBaseDb();
+        private void ListarTipo()
+        {
+            var lista = db.TipoUsuario.ToList();
+
+            if (lista.Count > 0)
+            {
+                Tipos_ConmoBox.DataSource = lista;
+                Tipos_ConmoBox.DisplayMember = "tipoCategoria";
+                Tipos_ConmoBox.ValueMember = "tipoID";
+
+            }
+
+        }
+
     }
 }

@@ -13,7 +13,7 @@ namespace Entidades
         public int usuarioID { get; set; }
         public string nombre { get; set; }
         public string clave { get; set; }
-        public string tipoUsuario { get; set; }
-
+        public string tipo { get; set; }
+        // public string tipoUsuario { get; set; }
     }
 }

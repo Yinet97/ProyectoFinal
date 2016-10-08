@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinal
 {
-    partial class Login
+    partial class Registro
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox_Emp = new System.Windows.Forms.CheckBox();
-            this.checkBox_Adm = new System.Windows.Forms.CheckBox();
+            this.Tipos_ConmoBox = new System.Windows.Forms.ComboBox();
             this.Boton_Buscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_Clave = new System.Windows.Forms.TextBox();
@@ -53,18 +51,16 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(250, 9);
+            this.label1.Location = new System.Drawing.Point(228, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 39);
+            this.label1.Size = new System.Drawing.Size(133, 39);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Log In";
+            this.label1.Text = "Registro";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.checkBox_Emp);
-            this.panel1.Controls.Add(this.checkBox_Adm);
+            this.panel1.Controls.Add(this.Tipos_ConmoBox);
             this.panel1.Controls.Add(this.Boton_Buscar);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox_Clave);
@@ -78,37 +74,17 @@
             this.panel1.Size = new System.Drawing.Size(409, 209);
             this.panel1.TabIndex = 1;
             // 
-            // textBox1
+            // Tipos_ConmoBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(205, 181);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 23);
-            this.textBox1.TabIndex = 9;
-            // 
-            // checkBox_Emp
-            // 
-            this.checkBox_Emp.AutoSize = true;
-            this.checkBox_Emp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox_Emp.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_Emp.Location = new System.Drawing.Point(280, 157);
-            this.checkBox_Emp.Name = "checkBox_Emp";
-            this.checkBox_Emp.Size = new System.Drawing.Size(76, 18);
-            this.checkBox_Emp.TabIndex = 8;
-            this.checkBox_Emp.Text = "Empleado";
-            this.checkBox_Emp.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_Adm
-            // 
-            this.checkBox_Adm.AutoSize = true;
-            this.checkBox_Adm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox_Adm.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_Adm.Location = new System.Drawing.Point(177, 157);
-            this.checkBox_Adm.Name = "checkBox_Adm";
-            this.checkBox_Adm.Size = new System.Drawing.Size(97, 18);
-            this.checkBox_Adm.TabIndex = 7;
-            this.checkBox_Adm.Text = "Administrador";
-            this.checkBox_Adm.UseVisualStyleBackColor = true;
+            this.Tipos_ConmoBox.FormattingEnabled = true;
+            this.Tipos_ConmoBox.Items.AddRange(new object[] {
+            "Aministrador",
+            "Empleado"});
+            this.Tipos_ConmoBox.Location = new System.Drawing.Point(177, 158);
+            this.Tipos_ConmoBox.Name = "Tipos_ConmoBox";
+            this.Tipos_ConmoBox.Size = new System.Drawing.Size(121, 21);
+            this.Tipos_ConmoBox.TabIndex = 9;
+            this.Tipos_ConmoBox.SelectedIndexChanged += new System.EventHandler(this.Tipos_ConmoBox_SelectedIndexChanged);
             // 
             // Boton_Buscar
             // 
@@ -236,7 +212,7 @@
             this.Boton_Eliminar.UseVisualStyleBackColor = false;
             this.Boton_Eliminar.Click += new System.EventHandler(this.Boton_Eliminar_Click);
             // 
-            // Login
+            // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -248,7 +224,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Login";
+            this.Name = "Registro";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -272,9 +248,7 @@
         private System.Windows.Forms.Button Boton_Eliminar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Boton_Buscar;
-        private System.Windows.Forms.CheckBox checkBox_Emp;
-        private System.Windows.Forms.CheckBox checkBox_Adm;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox Tipos_ConmoBox;
     }
 }
 
