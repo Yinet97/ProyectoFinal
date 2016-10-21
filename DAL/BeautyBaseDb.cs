@@ -16,5 +16,8 @@ namespace DAL
 
         public virtual DbSet<Usuarios> Usuario { get; set; }
         public virtual DbSet<TiposUsuarios> TipoUsuario { get; set; }
+        public virtual DbSet<Empleadas> Empleada { get; set; }
+        public virtual DbSet<Clientes> Cliente { get; set; }
+
     }
 }
