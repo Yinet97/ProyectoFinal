@@ -31,7 +31,7 @@ namespace ProyectoFinal
             {
                 Empleadas user = new Empleadas();
 
-                user.empleadaID = Convert.ToInt32(textBoxID.Text);
+             //   user.empleadaID = Convert.ToInt32(textBoxID.Text);
                 user.nombre = textBoxNombre.Text;
                 user.cedula = textBoxCedula.Text;
                 user.telefono = textBoxTelefono.Text;

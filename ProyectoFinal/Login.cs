@@ -82,5 +82,35 @@ namespace ProyectoFinal
             consulta.ConsultaClientes cc = new consulta.ConsultaClientes();
             cc.Show();
         }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.RegistroServicios rS = new Registros.RegistroServicios();
+            rS.Show();
+        }
+
+        private void serviciosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            consulta.consultaServicios cS = new consulta.consultaServicios();
+            cS.Show();
+        }
+
+        private void clientesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ReporteClientes re = new ReporteClientes();
+            re.Show();
+        }
+
+        private void empleadasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Reportes.ReporteEmpleadas report = new Reportes.ReporteEmpleadas();
+            report.Show();
+        }
+
+        private void serviciosToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Reportes.ReporteServicios reporte = new Reportes.ReporteServicios();
+            reporte.Show();
+        }
     }
 }

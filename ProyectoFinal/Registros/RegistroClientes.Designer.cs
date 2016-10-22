@@ -141,19 +141,19 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(134, 46);
+            this.label8.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(129, 43);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(24, 18);
+            this.label8.Size = new System.Drawing.Size(30, 23);
             this.label8.TabIndex = 36;
             this.label8.Text = "ID";
             // 
             // IDtextBox
             // 
             this.IDtextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDtextBox.Location = new System.Drawing.Point(218, 46);
+            this.IDtextBox.Location = new System.Drawing.Point(189, 46);
             this.IDtextBox.Name = "IDtextBox";
-            this.IDtextBox.Size = new System.Drawing.Size(61, 23);
+            this.IDtextBox.Size = new System.Drawing.Size(90, 23);
             this.IDtextBox.TabIndex = 35;
             // 
             // DireccionTextBox
@@ -161,17 +161,17 @@
             this.DireccionTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DireccionTextBox.Location = new System.Drawing.Point(189, 248);
             this.DireccionTextBox.Name = "DireccionTextBox";
-            this.DireccionTextBox.Size = new System.Drawing.Size(161, 23);
+            this.DireccionTextBox.Size = new System.Drawing.Size(200, 23);
             this.DireccionTextBox.TabIndex = 26;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 103);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(93, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 18);
+            this.label1.Size = new System.Drawing.Size(77, 23);
             this.label1.TabIndex = 18;
             this.label1.Text = "Nombre";
             // 
@@ -180,7 +180,7 @@
             this.NombretextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombretextBox.Location = new System.Drawing.Point(189, 103);
             this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(161, 23);
+            this.NombretextBox.Size = new System.Drawing.Size(200, 23);
             this.NombretextBox.TabIndex = 23;
             // 
             // CedulaTextBox
@@ -188,17 +188,17 @@
             this.CedulaTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CedulaTextBox.Location = new System.Drawing.Point(189, 152);
             this.CedulaTextBox.Name = "CedulaTextBox";
-            this.CedulaTextBox.Size = new System.Drawing.Size(161, 23);
+            this.CedulaTextBox.Size = new System.Drawing.Size(200, 23);
             this.CedulaTextBox.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 152);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(102, 149);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 18);
+            this.label2.Size = new System.Drawing.Size(67, 23);
             this.label2.TabIndex = 19;
             this.label2.Text = "Cedula";
             // 
@@ -207,17 +207,17 @@
             this.TelefonoTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TelefonoTextBox.Location = new System.Drawing.Point(189, 200);
             this.TelefonoTextBox.Name = "TelefonoTextBox";
-            this.TelefonoTextBox.Size = new System.Drawing.Size(161, 23);
+            this.TelefonoTextBox.Size = new System.Drawing.Size(200, 23);
             this.TelefonoTextBox.TabIndex = 25;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(93, 249);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(88, 246);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 18);
+            this.label4.Size = new System.Drawing.Size(87, 23);
             this.label4.TabIndex = 21;
             this.label4.Text = "Direccion";
             // 
@@ -225,10 +225,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(93, 200);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(88, 197);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 18);
+            this.label3.Size = new System.Drawing.Size(82, 23);
             this.label3.TabIndex = 20;
             this.label3.Text = "Telefono";
             // 
