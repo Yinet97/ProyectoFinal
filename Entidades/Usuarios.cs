@@ -10,10 +10,10 @@ namespace Entidades
     {
         [Key]
 
-        public int usuarioID { get; set; }
-        public string nombre { get; set; }
-        public string clave { get; set; }
-        public string tipo { get; set; }
+        public int UsuarioId { get; set; }
+        public string Nombre { get; set; }
+        public string Clave { get; set; }
+        public string Tipo { get; set; }
         // public string tipoUsuario { get; set; }
     }
 }

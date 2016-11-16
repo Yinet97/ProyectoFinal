@@ -10,11 +10,11 @@ namespace Entidades
     {
         [Key]
 
-        public int clienteID { get; set; }
-        public string nombre { get; set; }
-        public string cedula { get; set; }
-        public string direccion { get; set; }
-        public string telefono { get; set; }
+        public int ClienteId { get; set; }
+        public string Nombre { get; set; }
+        public string Cedula { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
 
     }
 }

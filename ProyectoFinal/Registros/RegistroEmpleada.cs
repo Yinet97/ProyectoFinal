@@ -32,12 +32,12 @@ namespace ProyectoFinal
                 Empleadas user = new Empleadas();
 
              //   user.empleadaID = Convert.ToInt32(textBoxID.Text);
-                user.nombre = textBoxNombre.Text;
-                user.cedula = textBoxCedula.Text;
-                user.telefono = textBoxTelefono.Text;
-                user.direccion = textBoxDireccion.Text;
-                user.cargo = textBoxCargo.Text;
-                user.sueldoFijo = Convert.ToInt32(textBoxSueldoFijo.Text);
+                user.Nombre = textBoxNombre.Text;
+                user.Cedula = textBoxCedula.Text;
+                user.Telefono = textBoxTelefono.Text;
+                user.Direccion = textBoxDireccion.Text;
+                user.Servicio = textBoxCargo.Text;
+                user.SueldoFijo = Convert.ToInt32(textBoxSueldoFijo.Text);
 
                 if (EmpleadasBll.Insertar(user))
                 {
@@ -96,28 +96,28 @@ namespace ProyectoFinal
                 try
                 {
                     var name = (from c in db.Empleada
-                                where c.empleadaID == id
-                                select c.nombre).FirstOrDefault();
+                                where c.EmpleadaId == id
+                                select c.Nombre).FirstOrDefault();
 
                     var sueldo = (from c in db.Empleada
-                                    where c.empleadaID == id
-                                    select c.sueldoFijo).FirstOrDefault();
+                                    where c.EmpleadaId == id
+                                    select c.SueldoFijo).FirstOrDefault();
 
                     var cargo = (from c in db.Empleada
-                                  where c.empleadaID == id
-                                  select c.cargo).FirstOrDefault();
+                                  where c.EmpleadaId == id
+                                  select c.Servicio).FirstOrDefault();
 
                     var direccion = (from c in db.Empleada
-                                     where c.empleadaID == id
-                                     select c.direccion).FirstOrDefault();
+                                     where c.EmpleadaId == id
+                                     select c.Direccion).FirstOrDefault();
 
                     var cedula = (from c in db.Empleada
-                                  where c.empleadaID == id
-                                  select c.cedula).FirstOrDefault();
+                                  where c.EmpleadaId == id
+                                  select c.Cedula).FirstOrDefault();
 
                     var telefono = (from c in db.Empleada
-                                  where c.empleadaID == id
-                                  select c.telefono).FirstOrDefault();
+                                  where c.EmpleadaId == id
+                                  select c.Telefono).FirstOrDefault();
 
 
                     textBoxNombre.Text = name;

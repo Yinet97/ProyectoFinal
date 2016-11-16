@@ -10,9 +10,9 @@ namespace Entidades
     {
         [Key]
 
-        public int servicioID { get; set; }
-        public string tipoServicio { get; set; }
-        public int costo { get; set; }
-
+        public int ServicioId { get; set; }
+        public string TipoServicio { get; set; }
+        public int Costo { get; set; }
+        public int PorcientoAdicional { get; set; }
     }
 }

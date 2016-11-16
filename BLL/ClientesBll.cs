@@ -35,7 +35,7 @@ namespace BLL
             {
                 using (BeautyBaseDb db = new BeautyBaseDb())
                 {
-                    Clientes user = (from c in db.Cliente where c.clienteID == id select c).FirstOrDefault();
+                    Clientes user = (from c in db.Cliente where c.ClienteId == id select c).FirstOrDefault();
                     db.Cliente.Remove(user);
                     db.SaveChanges();
                     retorno = true;
@@ -63,8 +63,18 @@ namespace BLL
             List<Clientes> lista = new List<Clientes>();
             BeautyBaseDb db = new BeautyBaseDb();
 
-            lista = db.Cliente.Where(u => u.clienteID == id).ToList();
+            lista = db.Cliente.Where(u => u.ClienteId == id).ToList();
             return lista;
+        }
+
+        public static Clientes Buscar(int id)
+        {
+            Clientes client = new Clientes();
+            using (var db = new BeautyBaseDb())
+            {
+                client = db.Cliente.Find(id);
+            }
+            return client;
         }
     }
 }

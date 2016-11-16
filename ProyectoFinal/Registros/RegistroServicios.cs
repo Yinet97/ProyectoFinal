@@ -30,8 +30,8 @@ namespace ProyectoFinal.Registros
             {
                 Servicios service = new Servicios();
 
-                service.tipoServicio = TipotextBox.Text;
-                service.costo = Convert.ToInt32(CostotextBox.Text);
+                service.TipoServicio = TipotextBox.Text;
+                service.Costo = Convert.ToInt32(CostotextBox.Text);
 
                 if (ServiciosBll.Guardar(service))
                 {
@@ -74,12 +74,12 @@ namespace ProyectoFinal.Registros
                 try
                 {
                     var service = (from c in db.Servicio
-                                where c.servicioID == id
-                                select c.tipoServicio).FirstOrDefault();
+                                where c.ServicioId == id
+                                select c.TipoServicio).FirstOrDefault();
 
                     var costo = (from c in db.Servicio
-                                  where c.servicioID == id
-                                  select c.costo).FirstOrDefault();
+                                  where c.ServicioId == id
+                                  select c.Costo).FirstOrDefault();
                     
 
 

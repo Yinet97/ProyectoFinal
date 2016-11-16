@@ -31,10 +31,10 @@ namespace ProyectoFinal.Registros
             {
                 Clientes user = new Clientes();
 
-                user.nombre = NombretextBox.Text;
-                user.cedula = CedulaTextBox.Text;
-                user.direccion = DireccionTextBox.Text;
-                user.telefono = TelefonoTextBox.Text;
+                user.Nombre = NombretextBox.Text;
+                user.Cedula = CedulaTextBox.Text;
+                user.Direccion = DireccionTextBox.Text;
+                user.Telefono = TelefonoTextBox.Text;
 
 
                 if (ClientesBll.Guardar(user))
@@ -69,20 +69,20 @@ namespace ProyectoFinal.Registros
                 try
                 {
                     var name = (from c in db.Cliente
-                                where c.clienteID == id
-                                select c.nombre).FirstOrDefault();
+                                where c.ClienteId == id
+                                select c.Nombre).FirstOrDefault();
 
                     var cedula = (from c in db.Cliente
-                                    where c.clienteID == id
-                                    select c.cedula).FirstOrDefault();
+                                    where c.ClienteId == id
+                                    select c.Cedula).FirstOrDefault();
 
                     var dir = (from c in db.Cliente
-                                  where c.clienteID == id
-                                  select c.direccion).FirstOrDefault();
+                                  where c.ClienteId == id
+                                  select c.Direccion).FirstOrDefault();
 
                     var telefono = (from c in db.Cliente
-                                  where c.clienteID == id
-                                  select c.telefono).FirstOrDefault();
+                                  where c.ClienteId == id
+                                  select c.Telefono).FirstOrDefault();
 
                     NombretextBox.Text = name;
                     CedulaTextBox.Text = cedula;

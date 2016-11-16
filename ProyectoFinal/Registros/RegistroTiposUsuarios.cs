@@ -22,7 +22,7 @@ namespace ProyectoFinal
 
         private void Boton_Guardar_Click(object sender, EventArgs e)
         {
-            string type = Tipos_ConmoBox.SelectedValue.ToString();
+           // string type = Tipos_ConmoBox.SelectedValue.ToString();
 
             if (string.IsNullOrEmpty(textBox_Nombre.Text) || string.IsNullOrEmpty(textBox_Clave.Text) || string.IsNullOrEmpty(textBox_ID.Text))
             {
@@ -33,10 +33,9 @@ namespace ProyectoFinal
             {
                 Usuarios user = new Usuarios();
 
-                user.clave = textBox_Clave.Text;
-                user.nombre = textBox_Nombre.Text;
-                user.usuarioID = Convert.ToInt32(textBox_ID.Text);
-                user.tipo = type;
+                user.Clave = textBox_Clave.Text;
+                user.Nombre = textBox_Nombre.Text;
+              //  user.Tipo = type;
 
 
                 if (TiposUsuariosBll.Insertar(user))
@@ -93,12 +92,12 @@ namespace ProyectoFinal
                 try
                 {
                     var name = (from c in db.Usuario
-                                where c.usuarioID == id
-                                select c.nombre).FirstOrDefault();
+                                where c.UsuarioId == id
+                                select c.Nombre).FirstOrDefault();
 
                     var password = (from c in db.Usuario
-                                    where c.usuarioID == id
-                                    select c.clave).FirstOrDefault();
+                                    where c.UsuarioId == id
+                                    select c.Clave).FirstOrDefault();
 
                     textBox_Nombre.Text = name;
                     textBox_Clave.Text = password;

@@ -37,8 +37,8 @@ namespace ProyectoFinal
             {
                 using (BeautyBaseDb db = new BeautyBaseDb())
                 {
-                    var user = (from u in db.Usuario where u.nombre == username select u.nombre).FirstOrDefault();
-                    var passw = (from u in db.Usuario where u.clave == username select u.clave).FirstOrDefault();
+                    var user = (from u in db.Usuario where u.Nombre == username select u.Nombre).FirstOrDefault();
+                    var passw = (from u in db.Usuario where u.Clave == username select u.Clave).FirstOrDefault();
 
                     if (user == username || passw == clave)
                     {

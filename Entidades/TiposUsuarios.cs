@@ -9,8 +9,8 @@ namespace Entidades
     public class TiposUsuarios
     {
         [Key]
-        public string tipoCategoria { get; set; }
-        public int tipoID { get; set; }
+        public string TipoCategoria { get; set; }
+        public int TipoId { get; set; }
 
     }
 }

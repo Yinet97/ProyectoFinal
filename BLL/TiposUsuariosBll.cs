@@ -35,7 +35,7 @@ namespace BLL
             {
                 using (BeautyBaseDb db = new BeautyBaseDb())
                 {
-                    Usuarios user = (from c in db.Usuario where c.usuarioID == id select c).FirstOrDefault();
+                    Usuarios user = (from c in db.Usuario where c.UsuarioId == id select c).FirstOrDefault();
                     db.Usuario.Remove(user);
                     db.SaveChanges();
                     retorno = true;
@@ -66,8 +66,18 @@ namespace BLL
             List<Usuarios> lista = new List<Usuarios>();
             BeautyBaseDb db = new BeautyBaseDb();
 
-            lista = db.Usuario.Where(u => u.usuarioID == id).ToList();
+            lista = db.Usuario.Where(u => u.UsuarioId == id).ToList();
             return lista;
+        }
+
+        public static TiposUsuarios Buscar(int id)
+        {
+            TiposUsuarios user = new TiposUsuarios();
+            using (var db = new BeautyBaseDb())
+            {
+                user = db.TipoUsuario.Find(id);
+            }
+            return user;
         }
 
     }
