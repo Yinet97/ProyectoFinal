@@ -48,15 +48,15 @@
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.panel1.Controls.Add(this.botonRegistrar);
             this.panel1.Controls.Add(this.botonEntrar);
             this.panel1.Controls.Add(this.claveTexBox);
@@ -226,16 +226,23 @@
             // clientesToolStripMenuItem2
             // 
             this.clientesToolStripMenuItem2.Name = "clientesToolStripMenuItem2";
-            this.clientesToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem2.Size = new System.Drawing.Size(131, 22);
             this.clientesToolStripMenuItem2.Text = "Clientes";
             this.clientesToolStripMenuItem2.Click += new System.EventHandler(this.clientesToolStripMenuItem2_Click);
             // 
             // empleadasToolStripMenuItem1
             // 
             this.empleadasToolStripMenuItem1.Name = "empleadasToolStripMenuItem1";
-            this.empleadasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.empleadasToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.empleadasToolStripMenuItem1.Text = "Empleadas";
             this.empleadasToolStripMenuItem1.Click += new System.EventHandler(this.empleadasToolStripMenuItem1_Click);
+            // 
+            // serviciosToolStripMenuItem2
+            // 
+            this.serviciosToolStripMenuItem2.Name = "serviciosToolStripMenuItem2";
+            this.serviciosToolStripMenuItem2.Size = new System.Drawing.Size(131, 22);
+            this.serviciosToolStripMenuItem2.Text = "Servicios";
+            this.serviciosToolStripMenuItem2.Click += new System.EventHandler(this.serviciosToolStripMenuItem2_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -243,18 +250,11 @@
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
-            // serviciosToolStripMenuItem2
-            // 
-            this.serviciosToolStripMenuItem2.Name = "serviciosToolStripMenuItem2";
-            this.serviciosToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.serviciosToolStripMenuItem2.Text = "Servicios";
-            this.serviciosToolStripMenuItem2.Click += new System.EventHandler(this.serviciosToolStripMenuItem2_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProyectoFinal.Properties.Resources.descarga;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 469);
             this.Controls.Add(this.panel1);
@@ -262,6 +262,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

@@ -125,5 +125,12 @@ namespace ProyectoFinal.Registros
         {
             LimpiarCampos();
         }
+
+        private void RegistroClientes_Load(object sender, EventArgs e)
+        {
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.CenterToScreen();
+        }
     }
 }
