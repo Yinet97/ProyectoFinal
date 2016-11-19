@@ -29,26 +29,32 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.BuscarBoton = new System.Windows.Forms.Button();
-            this.CostotextBox = new System.Windows.Forms.TextBox();
-            this.TipotextBox = new System.Windows.Forms.TextBox();
+            this.CostoTextBox = new System.Windows.Forms.TextBox();
+            this.TipoTextBox = new System.Windows.Forms.TextBox();
             this.IDtextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.EliminarBoton = new System.Windows.Forms.Button();
             this.GuardarBoton = new System.Windows.Forms.Button();
             this.NuevoBoton = new System.Windows.Forms.Button();
+            this.PorcientoTextBox = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.PorcientoTextBox);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.BuscarBoton);
-            this.panel1.Controls.Add(this.CostotextBox);
-            this.panel1.Controls.Add(this.TipotextBox);
+            this.panel1.Controls.Add(this.CostoTextBox);
+            this.panel1.Controls.Add(this.TipoTextBox);
             this.panel1.Controls.Add(this.IDtextBox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
@@ -57,6 +63,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(343, 240);
             this.panel1.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 19);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Porciento Adicional";
             // 
             // BuscarBoton
             // 
@@ -71,23 +87,23 @@
             this.BuscarBoton.UseVisualStyleBackColor = false;
             this.BuscarBoton.Click += new System.EventHandler(this.BuscarBoton_Click);
             // 
-            // CostotextBox
+            // CostoTextBox
             // 
-            this.CostotextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostotextBox.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.CostotextBox.Location = new System.Drawing.Point(79, 177);
-            this.CostotextBox.Name = "CostotextBox";
-            this.CostotextBox.Size = new System.Drawing.Size(186, 26);
-            this.CostotextBox.TabIndex = 6;
+            this.CostoTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostoTextBox.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.CostoTextBox.Location = new System.Drawing.Point(134, 150);
+            this.CostoTextBox.Name = "CostoTextBox";
+            this.CostoTextBox.Size = new System.Drawing.Size(186, 26);
+            this.CostoTextBox.TabIndex = 6;
             // 
-            // TipotextBox
+            // TipoTextBox
             // 
-            this.TipotextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipotextBox.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.TipotextBox.Location = new System.Drawing.Point(79, 102);
-            this.TipotextBox.Name = "TipotextBox";
-            this.TipotextBox.Size = new System.Drawing.Size(186, 26);
-            this.TipotextBox.TabIndex = 5;
+            this.TipoTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipoTextBox.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.TipoTextBox.Location = new System.Drawing.Point(134, 109);
+            this.TipoTextBox.Name = "TipoTextBox";
+            this.TipoTextBox.Size = new System.Drawing.Size(186, 26);
+            this.TipoTextBox.TabIndex = 5;
             // 
             // IDtextBox
             // 
@@ -102,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(150, 145);
+            this.label3.Location = new System.Drawing.Point(22, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 3;
@@ -112,7 +128,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(113, 73);
+            this.label4.Location = new System.Drawing.Point(5, 111);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 19);
             this.label4.TabIndex = 2;
@@ -127,16 +143,6 @@
             this.label2.Size = new System.Drawing.Size(26, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(173, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Registro de Servicios";
             // 
             // EliminarBoton
             // 
@@ -186,23 +192,57 @@
             this.NuevoBoton.UseVisualStyleBackColor = false;
             this.NuevoBoton.Click += new System.EventHandler(this.NuevoBoton_Click);
             // 
+            // PorcientoTextBox
+            // 
+            this.PorcientoTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PorcientoTextBox.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.PorcientoTextBox.Location = new System.Drawing.Point(152, 190);
+            this.PorcientoTextBox.Name = "PorcientoTextBox";
+            this.PorcientoTextBox.Size = new System.Drawing.Size(168, 26);
+            this.PorcientoTextBox.TabIndex = 35;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
+            this.panel3.Location = new System.Drawing.Point(0, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(664, 107);
+            this.panel3.TabIndex = 46;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(664, 15);
+            this.panel2.TabIndex = 45;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(110)))), ((int)(((byte)(99)))));
+            this.panel4.Location = new System.Drawing.Point(0, 380);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(670, 51);
+            this.panel4.TabIndex = 47;
+            // 
             // RegistroServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
-            this.ClientSize = new System.Drawing.Size(613, 408);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.ClientSize = new System.Drawing.Size(664, 429);
             this.Controls.Add(this.EliminarBoton);
             this.Controls.Add(this.GuardarBoton);
             this.Controls.Add(this.NuevoBoton);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
             this.Name = "RegistroServicios";
             this.Text = "Registro Servicios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -210,15 +250,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox CostotextBox;
-        private System.Windows.Forms.TextBox TipotextBox;
+        private System.Windows.Forms.TextBox CostoTextBox;
+        private System.Windows.Forms.TextBox TipoTextBox;
         private System.Windows.Forms.TextBox IDtextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button EliminarBoton;
         private System.Windows.Forms.Button GuardarBoton;
         private System.Windows.Forms.Button NuevoBoton;
         private System.Windows.Forms.Button BuscarBoton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox PorcientoTextBox;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

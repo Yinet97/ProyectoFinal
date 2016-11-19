@@ -62,45 +62,19 @@ namespace ProyectoFinal.Registros
 
         public void BuscarID()
         {
-            int id = Convert.ToInt32(IDtextBox.Text);
-
-            using (BeautyBaseDb db = new BeautyBaseDb())
+            var client = ClientesBll.Buscar(Convert.ToInt32(IDtextBox.Text));
+            if (client != null)
             {
-                try
-                {
-                    var name = (from c in db.Cliente
-                                where c.ClienteId == id
-                                select c.Nombre).FirstOrDefault();
-
-                    var cedula = (from c in db.Cliente
-                                    where c.ClienteId == id
-                                    select c.Cedula).FirstOrDefault();
-
-                    var dir = (from c in db.Cliente
-                                  where c.ClienteId == id
-                                  select c.Direccion).FirstOrDefault();
-
-                    var telefono = (from c in db.Cliente
-                                  where c.ClienteId == id
-                                  select c.Telefono).FirstOrDefault();
-
-                    NombretextBox.Text = name;
-                    CedulaTextBox.Text = cedula;
-                    DireccionTextBox.Text = dir;
-                    TelefonoTextBox.Text = telefono;
-
-                    if (name == null || cedula == null)
-                    {
-                        MessageBox.Show("Este Usuario no esxiste");
-                    }
-
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Este usuario no existe");
-                }
-
+                NombretextBox.Text = client.Nombre;
+                CedulaTextBox.Text = client.Cedula;
+                DireccionTextBox.Text = client.Direccion;
+                TelefonoTextBox.Text = client.Telefono;
             }
+            else
+            {
+                MessageBox.Show("Este Cliente no Existe");
+            }
+
         }
 
         private void EliminarBoton_Click(object sender, EventArgs e)
@@ -125,12 +99,6 @@ namespace ProyectoFinal.Registros
         {
             LimpiarCampos();
         }
-
-        private void RegistroClientes_Load(object sender, EventArgs e)
-        {
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.CenterToScreen();
-        }
+        
     }
 }

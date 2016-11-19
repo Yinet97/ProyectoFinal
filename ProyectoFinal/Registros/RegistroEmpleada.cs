@@ -22,7 +22,7 @@ namespace ProyectoFinal
         private void GuardarBoton_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(textBoxNombre.Text) || string.IsNullOrEmpty(textBoxCedula.Text) || string.IsNullOrEmpty(textBoxCargo.Text))
+            if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(CedulaTextBox.Text) || string.IsNullOrEmpty(ServicioTextBox.Text))
             {
                 MessageBox.Show("Dejaste un campo vacio");
 
@@ -30,14 +30,15 @@ namespace ProyectoFinal
             else
             {
                 Empleadas user = new Empleadas();
+                
 
-             //   user.empleadaID = Convert.ToInt32(textBoxID.Text);
-                user.Nombre = textBoxNombre.Text;
-                user.Cedula = textBoxCedula.Text;
-                user.Telefono = textBoxTelefono.Text;
-                user.Direccion = textBoxDireccion.Text;
-                user.Servicio = textBoxCargo.Text;
-                user.SueldoFijo = Convert.ToInt32(textBoxSueldoFijo.Text);
+                user.Nombre = NombreTextBox.Text;
+                user.Cedula = CedulaTextBox.Text;
+                user.Telefono = TelefonoTextBox.Text;
+                user.Direccion = DireccionTextBox.Text;
+                user.Servicio = ServicioTextBox.Text;
+                user.SueldoFijo = Convert.ToInt32(SueldoFijoTextBox.Text);
+                user.FechaEntrada = FechaDateTimePicker.Value ;
 
                 if (EmpleadasBll.Insertar(user))
                 {
@@ -49,7 +50,7 @@ namespace ProyectoFinal
 
         private void EliminarBoton_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBoxID.Text);
+            int id = Convert.ToInt32(IdTextBox.Text);
 
             EmpleadasBll.Eliminar(id);
             MessageBox.Show("Eliminado !");
@@ -63,21 +64,21 @@ namespace ProyectoFinal
 
         public void LimpiarCampos()
         {
-            textBoxID.Clear();
-            textBoxNombre.Clear();
-            textBoxCargo.Clear();
-            textBoxCedula.Clear();
-            textBoxDireccion.Clear();
-            textBoxSueldoFijo.Clear();
-            textBoxCargo.Clear();
-            textBoxTelefono.Clear();
+            IdTextBox.Clear();
+            NombreTextBox.Clear();
+            ServicioTextBox.Clear();
+            CedulaTextBox.Clear();
+            DireccionTextBox.Clear();
+            SueldoFijoTextBox.Clear();
+            ServicioTextBox.Clear();
+            TelefonoTextBox.Clear();
         }
 
         private void BuscarBoton_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBoxID.Text);
+            int id = Convert.ToInt32(IdTextBox.Text);
 
-            if (string.IsNullOrEmpty(textBoxID.Text))
+            if (string.IsNullOrEmpty(IdTextBox.Text))
             {
                 MessageBox.Show("Tienes el campo vacio");
             }
@@ -89,56 +90,24 @@ namespace ProyectoFinal
 
         public void BuscarID()
         {
-            int id = Convert.ToInt32(textBoxID.Text);
-
-            using (BeautyBaseDb db = new BeautyBaseDb())
+            var emp = EmpleadasBll.Buscar(Convert.ToInt32(IdTextBox.Text));
+            if (emp != null)
             {
-                try
-                {
-                    var name = (from c in db.Empleada
-                                where c.EmpleadaId == id
-                                select c.Nombre).FirstOrDefault();
-
-                    var sueldo = (from c in db.Empleada
-                                    where c.EmpleadaId == id
-                                    select c.SueldoFijo).FirstOrDefault();
-
-                    var cargo = (from c in db.Empleada
-                                  where c.EmpleadaId == id
-                                  select c.Servicio).FirstOrDefault();
-
-                    var direccion = (from c in db.Empleada
-                                     where c.EmpleadaId == id
-                                     select c.Direccion).FirstOrDefault();
-
-                    var cedula = (from c in db.Empleada
-                                  where c.EmpleadaId == id
-                                  select c.Cedula).FirstOrDefault();
-
-                    var telefono = (from c in db.Empleada
-                                  where c.EmpleadaId == id
-                                  select c.Telefono).FirstOrDefault();
-
-
-                    textBoxNombre.Text = name;
-                    textBoxSueldoFijo.Text = Convert.ToString(sueldo);
-                    textBoxCargo.Text = cargo;
-                    textBoxDireccion.Text = direccion;
-                    textBoxCedula.Text = cedula;
-                    textBoxTelefono.Text = telefono;
-
-                    if (name == null || cargo == null)
-                    {
-                        MessageBox.Show("Este Usuario no esxiste");
-                    }
-
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Este usuario no existe");
-                }
-
+                NombreTextBox.Text = emp.Nombre;
+                CedulaTextBox.Text = emp.Cedula;
+                DireccionTextBox.Text = emp.Direccion;
+                TelefonoTextBox.Text = emp.Telefono;
+                ServicioTextBox.Text = emp.Servicio;
+                FechaDateTimePicker.Text = emp.FechaEntrada.ToString();
+                SueldoFijoTextBox.Text = emp.SueldoFijo.ToString();
             }
+            else
+            {
+                MessageBox.Show("Este Cliente no Existe");
+            }
+
         }
+
+
     }
 }

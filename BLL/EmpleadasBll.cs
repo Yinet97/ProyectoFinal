@@ -48,10 +48,6 @@ namespace BLL
             }
             return retorno;
         }
-
-        /*  public static bool Buscar(int  id)
-          public static bool Eliminar()
-           public static bool Editar() */
         public static List<Empleadas> GetLista()
         {
             List<Empleadas> lista = new List<Empleadas>();

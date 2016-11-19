@@ -24,7 +24,7 @@ namespace ProyectoFinal
         {
            // string type = Tipos_ConmoBox.SelectedValue.ToString();
 
-            if (string.IsNullOrEmpty(textBox_Nombre.Text) || string.IsNullOrEmpty(textBox_Clave.Text) || string.IsNullOrEmpty(textBox_ID.Text))
+            if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(ClaveTextBox.Text) || string.IsNullOrEmpty(IdTextBox.Text))
             {
                 MessageBox.Show("Dejaste un campo vacio");
 
@@ -33,8 +33,8 @@ namespace ProyectoFinal
             {
                 Usuarios user = new Usuarios();
 
-                user.Clave = textBox_Clave.Text;
-                user.Nombre = textBox_Nombre.Text;
+                user.Clave = ClaveTextBox.Text;
+                user.Nombre = NombreTextBox.Text;
               //  user.Tipo = type;
 
 
@@ -49,7 +49,7 @@ namespace ProyectoFinal
 
         private void Boton_Eliminar_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBox_ID.Text);
+            int id = Convert.ToInt32(IdTextBox.Text);
 
             TiposUsuariosBll.Eliminar(id);
             MessageBox.Show("Eliminado !");
@@ -63,17 +63,17 @@ namespace ProyectoFinal
 
         public void LimpiarCampos()
         {
-            textBox_Nombre.Clear();
-            textBox_Clave.Clear();
-            textBox_ID.Clear();
+            NombreTextBox.Clear();
+            ClaveTextBox.Clear();
+            IdTextBox.Clear();
         }
 
         private void Boton_Buscar_Click_1(object sender, EventArgs e)
         {
 
-            int id = Convert.ToInt32(textBox_ID.Text);
+            int id = Convert.ToInt32(IdTextBox.Text);
 
-            if (string.IsNullOrEmpty(textBox_ID.Text))
+            if (string.IsNullOrEmpty(IdTextBox.Text))
             {
                 MessageBox.Show("Tienes el campo vacio");
             }
@@ -85,34 +85,15 @@ namespace ProyectoFinal
 
         public void BuscarID()
         {
-            int id = Convert.ToInt32(textBox_ID.Text);
-
-            using (BeautyBaseDb db = new BeautyBaseDb())
+            var user = UsuariosBll.Buscar(Convert.ToInt32(IdTextBox.Text));
+            if (user != null)
             {
-                try
-                {
-                    var name = (from c in db.Usuario
-                                where c.UsuarioId == id
-                                select c.Nombre).FirstOrDefault();
-
-                    var password = (from c in db.Usuario
-                                    where c.UsuarioId == id
-                                    select c.Clave).FirstOrDefault();
-
-                    textBox_Nombre.Text = name;
-                    textBox_Clave.Text = password;
-
-                    if (name == null || password == null)
-                    {
-                        MessageBox.Show("Este Usuario no esxiste");
-                    }
-
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Este usuario no existe");
-                }
-
+                NombreTextBox.Text = user.Nombre;
+                ClaveTextBox.Text = user.Clave;
+            }
+            else
+            {
+                MessageBox.Show("Este Cliente no Existe");
             }
         }
 
@@ -123,9 +104,9 @@ namespace ProyectoFinal
 
             if (lista.Count > 0)
             {
-                Tipos_ConmoBox.DataSource = lista;
-                Tipos_ConmoBox.DisplayMember = "tipoCategoria";
-                Tipos_ConmoBox.ValueMember = "tipoID";
+                TiposComboBox.DataSource = lista;
+                TiposComboBox.DisplayMember = "tipoCategoria";
+                TiposComboBox.ValueMember = "tipoID";
 
             }
         }

@@ -118,8 +118,6 @@ namespace ProyectoFinal
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.CenterToScreen();
-
-            // panel1.Location = new System.Drawing.Point(50,50);
         }
     }
 }
