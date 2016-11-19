@@ -50,6 +50,7 @@
             this.empleadasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CitasBoton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -250,6 +251,18 @@
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
+            // CitasBoton
+            // 
+            this.CitasBoton.BackColor = System.Drawing.Color.Cornsilk;
+            this.CitasBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CitasBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitasBoton.Location = new System.Drawing.Point(9, 83);
+            this.CitasBoton.Name = "CitasBoton";
+            this.CitasBoton.Size = new System.Drawing.Size(120, 56);
+            this.CitasBoton.TabIndex = 2;
+            this.CitasBoton.Text = "Citas";
+            this.CitasBoton.UseVisualStyleBackColor = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +270,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 469);
+            this.Controls.Add(this.CitasBoton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -296,5 +310,6 @@
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem empleadasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem2;
+        private System.Windows.Forms.Button CitasBoton;
     }
 }

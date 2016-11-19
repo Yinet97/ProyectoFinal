@@ -44,9 +44,10 @@
             // 
             // BotonBuscar
             // 
-            this.BotonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(229)))), ((int)(((byte)(245)))));
+            this.BotonBuscar.BackColor = System.Drawing.Color.Chocolate;
             this.BotonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBuscar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BotonBuscar.Location = new System.Drawing.Point(502, 84);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(152, 49);
@@ -59,6 +60,7 @@
             // 
             this.listadoConsulta.BackgroundColor = System.Drawing.Color.White;
             this.listadoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listadoConsulta.GridColor = System.Drawing.Color.LavenderBlush;
             this.listadoConsulta.Location = new System.Drawing.Point(20, 169);
             this.listadoConsulta.Name = "listadoConsulta";
             this.listadoConsulta.Size = new System.Drawing.Size(718, 186);
@@ -68,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(758, 438);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.BotonBuscar);

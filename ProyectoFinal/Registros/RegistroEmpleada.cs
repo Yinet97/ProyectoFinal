@@ -38,7 +38,7 @@ namespace ProyectoFinal
                 user.Direccion = DireccionTextBox.Text;
                 user.Servicio = ServicioTextBox.Text;
                 user.SueldoFijo = Convert.ToInt32(SueldoFijoTextBox.Text);
-                user.FechaEntrada = FechaDateTimePicker.Value ;
+                user.FechaEntrada = FechaDateTimePicker.Value.Date;
 
                 if (EmpleadasBll.Insertar(user))
                 {

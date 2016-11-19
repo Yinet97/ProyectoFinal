@@ -14,10 +14,11 @@ namespace BLL
             bool retorno = false;
             try
             {
-                BeautyBaseDb db = new BeautyBaseDb();
-                db.Cliente.Add(cliente);
-                db.SaveChanges();
-
+                using (var db = new BeautyBaseDb())
+                {
+                    db.Cliente.Add(cliente);
+                    db.SaveChanges();
+                }
                 retorno = true;
             }
             catch (Exception)
@@ -70,7 +71,7 @@ namespace BLL
         public static Clientes Buscar(int id)
         {
             Clientes client = new Clientes();
-            using (var db = new BeautyBaseDb())
+            using (BeautyBaseDb db = new BeautyBaseDb())
             {
                 client = db.Cliente.Find(id);
             }
