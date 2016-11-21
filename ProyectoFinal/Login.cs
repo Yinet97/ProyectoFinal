@@ -119,5 +119,11 @@ namespace ProyectoFinal
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.CenterToScreen();
         }
+
+        private void CitasBoton_Click(object sender, EventArgs e)
+        {
+            Registros.RegistroCitas rc = new Registros.RegistroCitas();
+            rc.Show();
+        }
     }
 }

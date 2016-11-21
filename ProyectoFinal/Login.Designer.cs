@@ -262,6 +262,7 @@
             this.CitasBoton.TabIndex = 2;
             this.CitasBoton.Text = "Citas";
             this.CitasBoton.UseVisualStyleBackColor = false;
+            this.CitasBoton.Click += new System.EventHandler(this.CitasBoton_Click);
             // 
             // Login
             // 

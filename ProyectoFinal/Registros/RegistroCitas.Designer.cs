@@ -29,44 +29,85 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ClienteTextBox = new System.Windows.Forms.TextBox();
+            this.IdCitaTextBox = new System.Windows.Forms.TextBox();
+            this.CitaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.CitaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.IdTextBox = new System.Windows.Forms.TextBox();
-            this.ClienteTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.HoraDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.IdClienteTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ClienteGroupBox = new System.Windows.Forms.GroupBox();
+            this.CitaGroupBox1 = new System.Windows.Forms.GroupBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.NuevoBoton = new System.Windows.Forms.Button();
+            this.EliminarBoton = new System.Windows.Forms.Button();
+            this.GuardarBoton = new System.Windows.Forms.Button();
+            this.BuscarClienteBoton = new System.Windows.Forms.Button();
+            this.BuscarCitaBoton = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.ClienteGroupBox.SuspendLayout();
+            this.CitaGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.ClienteTextBox);
-            this.panel1.Controls.Add(this.IdTextBox);
-            this.panel1.Controls.Add(this.CitaDateTimePicker);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(97, 60);
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.ClienteGroupBox);
+            this.panel1.Controls.Add(this.CitaGroupBox1);
+            this.panel1.Location = new System.Drawing.Point(53, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 169);
+            this.panel1.Size = new System.Drawing.Size(781, 322);
             this.panel1.TabIndex = 0;
+            // 
+            // ClienteTextBox
+            // 
+            this.ClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClienteTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.ClienteTextBox.Location = new System.Drawing.Point(83, 79);
+            this.ClienteTextBox.Name = "ClienteTextBox";
+            this.ClienteTextBox.Size = new System.Drawing.Size(228, 22);
+            this.ClienteTextBox.TabIndex = 5;
+            // 
+            // IdCitaTextBox
+            // 
+            this.IdCitaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdCitaTextBox.Location = new System.Drawing.Point(60, 31);
+            this.IdCitaTextBox.Name = "IdCitaTextBox";
+            this.IdCitaTextBox.Size = new System.Drawing.Size(73, 22);
+            this.IdCitaTextBox.TabIndex = 4;
+            // 
+            // CitaDateTimePicker
+            // 
+            this.CitaDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.Coral;
+            this.CitaDateTimePicker.Checked = false;
+            this.CitaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitaDateTimePicker.Location = new System.Drawing.Point(61, 68);
+            this.CitaDateTimePicker.Name = "CitaDateTimePicker";
+            this.CitaDateTimePicker.Size = new System.Drawing.Size(228, 22);
+            this.CitaDateTimePicker.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 97);
+            this.label3.Location = new System.Drawing.Point(6, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 18);
+            this.label3.Size = new System.Drawing.Size(49, 18);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Fecha y hora";
+            this.label3.Text = "Fecha";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(61, 65);
+            this.label2.Location = new System.Drawing.Point(15, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 1;
@@ -76,48 +117,188 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 32);
+            this.label1.Location = new System.Drawing.Point(26, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
-            // CitaDateTimePicker
+            // label4
             // 
-            this.CitaDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.Coral;
-            this.CitaDateTimePicker.Checked = false;
-            this.CitaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CitaDateTimePicker.Location = new System.Drawing.Point(120, 97);
-            this.CitaDateTimePicker.Name = "CitaDateTimePicker";
-            this.CitaDateTimePicker.Size = new System.Drawing.Size(228, 22);
-            this.CitaDateTimePicker.TabIndex = 3;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 18);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Hora";
             // 
-            // IdTextBox
+            // HoraDateTimePicker
             // 
-            this.IdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdTextBox.Location = new System.Drawing.Point(136, 28);
-            this.IdTextBox.Name = "IdTextBox";
-            this.IdTextBox.Size = new System.Drawing.Size(73, 22);
-            this.IdTextBox.TabIndex = 4;
+            this.HoraDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.Coral;
+            this.HoraDateTimePicker.Checked = false;
+            this.HoraDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoraDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.HoraDateTimePicker.Location = new System.Drawing.Point(61, 108);
+            this.HoraDateTimePicker.Name = "HoraDateTimePicker";
+            this.HoraDateTimePicker.Size = new System.Drawing.Size(228, 22);
+            this.HoraDateTimePicker.TabIndex = 7;
             // 
-            // ClienteTextBox
+            // IdClienteTextBox
             // 
-            this.ClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClienteTextBox.Location = new System.Drawing.Point(120, 65);
-            this.ClienteTextBox.Name = "ClienteTextBox";
-            this.ClienteTextBox.Size = new System.Drawing.Size(228, 22);
-            this.ClienteTextBox.TabIndex = 5;
+            this.IdClienteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdClienteTextBox.Location = new System.Drawing.Point(83, 36);
+            this.IdClienteTextBox.Name = "IdClienteTextBox";
+            this.IdClienteTextBox.Size = new System.Drawing.Size(73, 22);
+            this.IdClienteTextBox.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(46, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 18);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "ID";
+            // 
+            // ClienteGroupBox
+            // 
+            this.ClienteGroupBox.BackColor = System.Drawing.Color.White;
+            this.ClienteGroupBox.Controls.Add(this.BuscarClienteBoton);
+            this.ClienteGroupBox.Controls.Add(this.IdClienteTextBox);
+            this.ClienteGroupBox.Controls.Add(this.label2);
+            this.ClienteGroupBox.Controls.Add(this.label5);
+            this.ClienteGroupBox.Controls.Add(this.ClienteTextBox);
+            this.ClienteGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClienteGroupBox.Location = new System.Drawing.Point(12, 36);
+            this.ClienteGroupBox.Name = "ClienteGroupBox";
+            this.ClienteGroupBox.Size = new System.Drawing.Size(348, 149);
+            this.ClienteGroupBox.TabIndex = 1;
+            this.ClienteGroupBox.TabStop = false;
+            this.ClienteGroupBox.Text = "Cliente";
+            // 
+            // CitaGroupBox1
+            // 
+            this.CitaGroupBox1.BackColor = System.Drawing.Color.White;
+            this.CitaGroupBox1.Controls.Add(this.BuscarCitaBoton);
+            this.CitaGroupBox1.Controls.Add(this.HoraDateTimePicker);
+            this.CitaGroupBox1.Controls.Add(this.label1);
+            this.CitaGroupBox1.Controls.Add(this.label4);
+            this.CitaGroupBox1.Controls.Add(this.CitaDateTimePicker);
+            this.CitaGroupBox1.Controls.Add(this.IdCitaTextBox);
+            this.CitaGroupBox1.Controls.Add(this.label3);
+            this.CitaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitaGroupBox1.Location = new System.Drawing.Point(388, 36);
+            this.CitaGroupBox1.Name = "CitaGroupBox1";
+            this.CitaGroupBox1.Size = new System.Drawing.Size(348, 149);
+            this.CitaGroupBox1.TabIndex = 10;
+            this.CitaGroupBox1.TabStop = false;
+            this.CitaGroupBox1.Text = "Cita";
+            // 
+            // listView1
+            // 
+            this.listView1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.listView1.Location = new System.Drawing.Point(133, 201);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(520, 97);
+            this.listView1.TabIndex = 11;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // NuevoBoton
+            // 
+            this.NuevoBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoBoton.Location = new System.Drawing.Point(63, 361);
+            this.NuevoBoton.Name = "NuevoBoton";
+            this.NuevoBoton.Size = new System.Drawing.Size(117, 49);
+            this.NuevoBoton.TabIndex = 1;
+            this.NuevoBoton.Text = "Nuevo";
+            this.NuevoBoton.UseVisualStyleBackColor = true;
+            // 
+            // EliminarBoton
+            // 
+            this.EliminarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarBoton.Location = new System.Drawing.Point(621, 361);
+            this.EliminarBoton.Name = "EliminarBoton";
+            this.EliminarBoton.Size = new System.Drawing.Size(117, 49);
+            this.EliminarBoton.TabIndex = 2;
+            this.EliminarBoton.Text = "Eliminar";
+            this.EliminarBoton.UseVisualStyleBackColor = true;
+            // 
+            // GuardarBoton
+            // 
+            this.GuardarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuardarBoton.Location = new System.Drawing.Point(381, 361);
+            this.GuardarBoton.Name = "GuardarBoton";
+            this.GuardarBoton.Size = new System.Drawing.Size(117, 49);
+            this.GuardarBoton.TabIndex = 3;
+            this.GuardarBoton.Text = "Guardar";
+            this.GuardarBoton.UseVisualStyleBackColor = true;
+            // 
+            // BuscarClienteBoton
+            // 
+            this.BuscarClienteBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarClienteBoton.Location = new System.Drawing.Point(162, 32);
+            this.BuscarClienteBoton.Name = "BuscarClienteBoton";
+            this.BuscarClienteBoton.Size = new System.Drawing.Size(70, 31);
+            this.BuscarClienteBoton.TabIndex = 4;
+            this.BuscarClienteBoton.Text = "Buscar";
+            this.BuscarClienteBoton.UseVisualStyleBackColor = true;
+            // 
+            // BuscarCitaBoton
+            // 
+            this.BuscarCitaBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarCitaBoton.Location = new System.Drawing.Point(154, 26);
+            this.BuscarCitaBoton.Name = "BuscarCitaBoton";
+            this.BuscarCitaBoton.Size = new System.Drawing.Size(70, 31);
+            this.BuscarCitaBoton.TabIndex = 10;
+            this.BuscarCitaBoton.Text = "Buscar";
+            this.BuscarCitaBoton.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
+            this.panel3.Location = new System.Drawing.Point(-4, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(884, 107);
+            this.panel3.TabIndex = 44;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.panel2.Location = new System.Drawing.Point(-4, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(884, 15);
+            this.panel2.TabIndex = 43;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(110)))), ((int)(((byte)(99)))));
+            this.panel4.Location = new System.Drawing.Point(0, 382);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(880, 51);
+            this.panel4.TabIndex = 45;
             // 
             // RegistroCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 358);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(880, 433);
+            this.Controls.Add(this.NuevoBoton);
+            this.Controls.Add(this.GuardarBoton);
+            this.Controls.Add(this.EliminarBoton);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
             this.Name = "RegistroCitas";
             this.Text = "Registro Citas";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ClienteGroupBox.ResumeLayout(false);
+            this.ClienteGroupBox.PerformLayout();
+            this.CitaGroupBox1.ResumeLayout(false);
+            this.CitaGroupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -129,7 +310,22 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ClienteTextBox;
-        private System.Windows.Forms.TextBox IdTextBox;
+        private System.Windows.Forms.TextBox IdCitaTextBox;
         private System.Windows.Forms.DateTimePicker CitaDateTimePicker;
+        private System.Windows.Forms.DateTimePicker HoraDateTimePicker;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox ClienteGroupBox;
+        private System.Windows.Forms.TextBox IdClienteTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox CitaGroupBox1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button BuscarClienteBoton;
+        private System.Windows.Forms.Button BuscarCitaBoton;
+        private System.Windows.Forms.Button NuevoBoton;
+        private System.Windows.Forms.Button EliminarBoton;
+        private System.Windows.Forms.Button GuardarBoton;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }
