@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Citas.cs" />
     <Compile Include="Clientes.cs" />
     <Compile Include="Empleadas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
