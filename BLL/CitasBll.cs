@@ -31,7 +31,52 @@ namespace BLL
 
         public static Citas Buscar(int id)
         {
+            Citas date = new Citas();
+            using (var db = new BeautyBaseDb())
+            {
+                date = db.Cita.Find(id);
+            }
+            return date;
+        }
 
+        public static bool Eliminar(int id)
+        {
+            bool retorno = false;
+
+            try
+            {
+                using (BeautyBaseDb db = new BeautyBaseDb())
+                {
+                    Citas date = (from c in db.Cita where c.CitaId == id select c).FirstOrDefault();
+                    db.Cita.Remove(date);
+                    db.SaveChanges();
+                    retorno = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return retorno;
+        }
+
+        public static List<Citas> GetLista()
+        {
+            List<Citas> lista = new List<Citas>();
+            BeautyBaseDb db = new BeautyBaseDb();
+
+            lista = db.Cita.ToList();
+            return lista;
+        }
+
+        public static List<Citas> GetLista(int id)
+        {
+            List<Citas> lista = new List<Citas>();
+            BeautyBaseDb db = new BeautyBaseDb();
+
+            lista = db.Cita.Where(u => u.CitaId == id).ToList();
+            return lista;
         }
     }
 }

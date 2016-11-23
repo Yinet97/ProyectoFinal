@@ -311,9 +311,12 @@
     <None Include="Resources\40px-Icono_buscar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataBase\BeautyBaseDb.mdf" />
+    <Content Include="DataBase\BeautyBaseDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="DataBase\BeautyBaseDb_log.ldf">
       <DependentUpon>BeautyBaseDb.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\material_design_4k_wallpaper_015_by_charlie_henson-da8rgot.png" />
     <None Include="Resources\descarga.jpg" />
