@@ -89,19 +89,27 @@ namespace ProyectoFinal.Registros
         private void GuardarBoton_Click(object sender, EventArgs e)
         {
             Citas date = new Citas();
-            date.NombreCliente = ClienteTextBox.Text;
-            date.Fecha = CitaDateTimePicker.Value.Date;
-            date.Hora = HoraDateTimePicker.Value;
+            using (BeautyBaseDb db = new BeautyBaseDb())
+            {
+                string var = (from c in db.Cliente where c.Nombre == ClienteTextBox.Text select c.Nombre).FirstOrDefault();
+                if (var == ClienteTextBox.Text)
+                {
+                    date.NombreCliente = ClienteTextBox.Text;
+                    date.Fecha = CitaDateTimePicker.Value.Date;
+                    date.Hora = Convert.ToDateTime(HoraDateTimePicker.Value.ToShortTimeString());
 
-            if(CitasBll.Guardar(date))
-            {
-                MessageBox.Show("Cita Guardada");
-                LlenarLista();
+                    if (CitasBll.Guardar(date))
+                    {
+                        MessageBox.Show("Cita Guardada");
+                        LlenarLista();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Este Cliente no esta registrado");
+                }
             }
-            else
-            {
-                MessageBox.Show("No se pudo Guardar");
-            }
+            
         }
 
         public void LlenarLista()

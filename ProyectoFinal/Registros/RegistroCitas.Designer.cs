@@ -164,12 +164,14 @@
             // 
             this.HoraDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.Coral;
             this.HoraDateTimePicker.Checked = false;
+            this.HoraDateTimePicker.CustomFormat = "hh:mm tt";
             this.HoraDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoraDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.HoraDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.HoraDateTimePicker.Location = new System.Drawing.Point(61, 108);
             this.HoraDateTimePicker.Name = "HoraDateTimePicker";
-            this.HoraDateTimePicker.Size = new System.Drawing.Size(228, 22);
+            this.HoraDateTimePicker.Size = new System.Drawing.Size(98, 22);
             this.HoraDateTimePicker.TabIndex = 7;
+            this.HoraDateTimePicker.Value = new System.DateTime(2016, 11, 22, 23, 11, 0, 0);
             // 
             // label1
             // 
@@ -195,10 +197,11 @@
             // 
             this.CitaDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.Coral;
             this.CitaDateTimePicker.Checked = false;
+            this.CitaDateTimePicker.CustomFormat = "";
             this.CitaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CitaDateTimePicker.Location = new System.Drawing.Point(61, 68);
             this.CitaDateTimePicker.Name = "CitaDateTimePicker";
-            this.CitaDateTimePicker.Size = new System.Drawing.Size(228, 22);
+            this.CitaDateTimePicker.Size = new System.Drawing.Size(243, 22);
             this.CitaDateTimePicker.TabIndex = 3;
             // 
             // IdCitaTextBox
