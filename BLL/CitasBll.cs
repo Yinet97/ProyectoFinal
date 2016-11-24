@@ -61,6 +61,28 @@ namespace BLL
             return retorno;
         }
 
+        public static bool EliminarCitaPasada(DateTime cita)
+        {
+            bool retorno = false;
+
+            try
+            {
+                using (BeautyBaseDb db = new BeautyBaseDb())
+                {
+                    Citas date = (from c in db.Cita where c.FechaHora == cita select c).FirstOrDefault();
+                    db.Cita.Remove(date);
+                    db.SaveChanges();
+                    retorno = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return retorno;
+        }
+
         public static List<Citas> GetLista()
         {
             List<Citas> lista = new List<Citas>();

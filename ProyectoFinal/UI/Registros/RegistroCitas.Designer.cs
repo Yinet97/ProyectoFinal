@@ -48,6 +48,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.ActualizarBoton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListaCitaDataGridView)).BeginInit();
             this.ClienteGroupBox.SuspendLayout();
@@ -57,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.ActualizarBoton);
             this.panel1.Controls.Add(this.ListaCitaDataGridView);
             this.panel1.Controls.Add(this.ClienteGroupBox);
             this.panel1.Controls.Add(this.CitaGroupBox1);
@@ -73,7 +75,7 @@
             this.ListaCitaDataGridView.GridColor = System.Drawing.Color.Maroon;
             this.ListaCitaDataGridView.Location = new System.Drawing.Point(133, 202);
             this.ListaCitaDataGridView.Name = "ListaCitaDataGridView";
-            this.ListaCitaDataGridView.Size = new System.Drawing.Size(514, 105);
+            this.ListaCitaDataGridView.Size = new System.Drawing.Size(514, 80);
             this.ListaCitaDataGridView.TabIndex = 11;
             // 
             // ClienteGroupBox
@@ -264,6 +266,17 @@
             this.panel4.Size = new System.Drawing.Size(880, 51);
             this.panel4.TabIndex = 45;
             // 
+            // ActualizarBoton
+            // 
+            this.ActualizarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualizarBoton.Location = new System.Drawing.Point(346, 288);
+            this.ActualizarBoton.Name = "ActualizarBoton";
+            this.ActualizarBoton.Size = new System.Drawing.Size(85, 28);
+            this.ActualizarBoton.TabIndex = 46;
+            this.ActualizarBoton.Text = "Actualizar";
+            this.ActualizarBoton.UseVisualStyleBackColor = true;
+            this.ActualizarBoton.Click += new System.EventHandler(this.ActualizarBoton_Click);
+            // 
             // RegistroCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,5 +325,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView ListaCitaDataGridView;
+        private System.Windows.Forms.Button ActualizarBoton;
     }
 }

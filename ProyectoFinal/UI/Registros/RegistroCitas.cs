@@ -144,6 +144,29 @@ namespace ProyectoFinal.Registros
             }
             ClienteTextBox.AutoCompleteCustomSource = aColl;
         }
-        
+
+        public void EliminarCitaAntigua()
+        {
+            BeautyBaseDb db = new BeautyBaseDb();
+            DateTime hoy = DateTime.Now;
+
+            var pastDate = from obj in db.Cita
+                     select obj.FechaHora;
+
+            foreach(DateTime d in pastDate)
+            {
+                if(d.Date < hoy)
+                {
+                    CitasBll.EliminarCitaPasada(d);
+                }
+                LlenarLista();
+            }
+
+        }
+
+        private void ActualizarBoton_Click(object sender, EventArgs e)
+        {
+            EliminarCitaAntigua();
+        }
     }
 }
