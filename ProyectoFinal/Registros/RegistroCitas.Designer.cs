@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ListaCitaDataGridView = new System.Windows.Forms.DataGridView();
             this.ClienteGroupBox = new System.Windows.Forms.GroupBox();
             this.BuscarClienteBoton = new System.Windows.Forms.Button();
             this.IdClienteTextBox = new System.Windows.Forms.TextBox();
@@ -37,9 +38,7 @@
             this.ClienteTextBox = new System.Windows.Forms.TextBox();
             this.CitaGroupBox1 = new System.Windows.Forms.GroupBox();
             this.BuscarCitaBoton = new System.Windows.Forms.Button();
-            this.HoraDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.CitaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.IdCitaTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,11 +48,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.ListaCitaDataGridView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ListaCitaDataGridView)).BeginInit();
             this.ClienteGroupBox.SuspendLayout();
             this.CitaGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ListaCitaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +64,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(781, 322);
             this.panel1.TabIndex = 0;
+            // 
+            // ListaCitaDataGridView
+            // 
+            this.ListaCitaDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ListaCitaDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.ListaCitaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListaCitaDataGridView.GridColor = System.Drawing.Color.Maroon;
+            this.ListaCitaDataGridView.Location = new System.Drawing.Point(133, 202);
+            this.ListaCitaDataGridView.Name = "ListaCitaDataGridView";
+            this.ListaCitaDataGridView.Size = new System.Drawing.Size(514, 105);
+            this.ListaCitaDataGridView.TabIndex = 11;
             // 
             // ClienteGroupBox
             // 
@@ -135,9 +144,7 @@
             // 
             this.CitaGroupBox1.BackColor = System.Drawing.Color.White;
             this.CitaGroupBox1.Controls.Add(this.BuscarCitaBoton);
-            this.CitaGroupBox1.Controls.Add(this.HoraDateTimePicker);
             this.CitaGroupBox1.Controls.Add(this.label1);
-            this.CitaGroupBox1.Controls.Add(this.label4);
             this.CitaGroupBox1.Controls.Add(this.CitaDateTimePicker);
             this.CitaGroupBox1.Controls.Add(this.IdCitaTextBox);
             this.CitaGroupBox1.Controls.Add(this.label3);
@@ -160,19 +167,6 @@
             this.BuscarCitaBoton.UseVisualStyleBackColor = true;
             this.BuscarCitaBoton.Click += new System.EventHandler(this.BuscarCitaBoton_Click);
             // 
-            // HoraDateTimePicker
-            // 
-            this.HoraDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.Coral;
-            this.HoraDateTimePicker.Checked = false;
-            this.HoraDateTimePicker.CustomFormat = "hh:mm tt";
-            this.HoraDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoraDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HoraDateTimePicker.Location = new System.Drawing.Point(61, 108);
-            this.HoraDateTimePicker.Name = "HoraDateTimePicker";
-            this.HoraDateTimePicker.Size = new System.Drawing.Size(98, 22);
-            this.HoraDateTimePicker.TabIndex = 7;
-            this.HoraDateTimePicker.Value = new System.DateTime(2016, 11, 22, 23, 11, 0, 0);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -183,22 +177,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Hora";
-            // 
             // CitaDateTimePicker
             // 
             this.CitaDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.Coral;
             this.CitaDateTimePicker.Checked = false;
-            this.CitaDateTimePicker.CustomFormat = "";
+            this.CitaDateTimePicker.CustomFormat = "dd/mm /yyyy    hh :mm tt";
             this.CitaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.CitaDateTimePicker.Location = new System.Drawing.Point(61, 68);
             this.CitaDateTimePicker.Name = "CitaDateTimePicker";
             this.CitaDateTimePicker.Size = new System.Drawing.Size(243, 22);
@@ -216,11 +201,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 68);
+            this.label3.Location = new System.Drawing.Point(4, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 18);
+            this.label3.Size = new System.Drawing.Size(58, 18);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Fecha";
+            this.label3.Text = "Horario";
             // 
             // NuevoBoton
             // 
@@ -279,16 +264,6 @@
             this.panel4.Size = new System.Drawing.Size(880, 51);
             this.panel4.TabIndex = 45;
             // 
-            // ListaCitaDataGridView
-            // 
-            this.ListaCitaDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.ListaCitaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaCitaDataGridView.GridColor = System.Drawing.Color.Maroon;
-            this.ListaCitaDataGridView.Location = new System.Drawing.Point(133, 202);
-            this.ListaCitaDataGridView.Name = "ListaCitaDataGridView";
-            this.ListaCitaDataGridView.Size = new System.Drawing.Size(514, 105);
-            this.ListaCitaDataGridView.TabIndex = 11;
-            // 
             // RegistroCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,12 +279,13 @@
             this.Controls.Add(this.panel4);
             this.Name = "RegistroCitas";
             this.Text = "Registro Citas";
+            this.Load += new System.EventHandler(this.RegistroCitas_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ListaCitaDataGridView)).EndInit();
             this.ClienteGroupBox.ResumeLayout(false);
             this.ClienteGroupBox.PerformLayout();
             this.CitaGroupBox1.ResumeLayout(false);
             this.CitaGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ListaCitaDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,8 +299,6 @@
         private System.Windows.Forms.TextBox ClienteTextBox;
         private System.Windows.Forms.TextBox IdCitaTextBox;
         private System.Windows.Forms.DateTimePicker CitaDateTimePicker;
-        private System.Windows.Forms.DateTimePicker HoraDateTimePicker;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox ClienteGroupBox;
         private System.Windows.Forms.TextBox IdClienteTextBox;
         private System.Windows.Forms.Label label5;

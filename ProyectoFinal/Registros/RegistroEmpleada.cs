@@ -30,21 +30,31 @@ namespace ProyectoFinal
             else
             {
                 Empleadas user = new Empleadas();
-                
 
-                user.Nombre = NombreTextBox.Text;
-                user.Cedula = CedulaTextBox.Text;
-                user.Telefono = TelefonoTextBox.Text;
-                user.Direccion = DireccionTextBox.Text;
-                user.Servicio = ServicioTextBox.Text;
-                user.SueldoFijo = Convert.ToInt32(SueldoFijoTextBox.Text);
-                user.FechaEntrada = FechaDateTimePicker.Value.Date;
-
-                if (EmpleadasBll.Insertar(user))
+                using (BeautyBaseDb db = new BeautyBaseDb())
                 {
-                    MessageBox.Show("Guardado !!");
+                    string var = (from c in db.Servicio where c.TipoServicio == ServicioTextBox.Text select c.TipoServicio).FirstOrDefault();
+                    if (var == ServicioTextBox.Text)
+                    {
+                        user.Nombre = NombreTextBox.Text;
+                        user.Cedula = CedulaTextBox.Text;
+                        user.Telefono = TelefonoTextBox.Text;
+                        user.Direccion = DireccionTextBox.Text;
+                        user.Servicio = ServicioTextBox.Text;
+                        user.SueldoFijo = Convert.ToInt32(SueldoFijoTextBox.Text);
+                        user.FechaEntrada = FechaDateTimePicker.Value.Date;
+
+                        if (EmpleadasBll.Insertar(user))
+                        {
+                            MessageBox.Show("Empleadao Guardada Exitosamente");
+                            LimpiarCampos();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Servicio no esta registrado");
+                    }
                 }
-                LimpiarCampos();
             }
         }
 
@@ -108,6 +118,30 @@ namespace ProyectoFinal
 
         }
 
+        private void RegistroEmpleada_Load(object sender, EventArgs e)
+        {
+            AutoCompleteMode DataCollection = new AutoCompleteMode();
+            AutoCompletarTxt(DataCollection);
+        }
 
+        private void AutoCompletarTxt(AutoCompleteMode AuMode)
+        {
+            BeautyBaseDb db = new BeautyBaseDb();
+
+            ServicioTextBox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            ServicioTextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            AutoCompleteStringCollection aColl = new AutoCompleteStringCollection();
+
+
+            var ser = from obj in db.Servicio
+                       select obj.TipoServicio;
+
+            foreach (string cad in ser)
+            {
+                aColl.Add(cad);
+            }
+            ServicioTextBox.AutoCompleteCustomSource = aColl;
+        }
     }
 }

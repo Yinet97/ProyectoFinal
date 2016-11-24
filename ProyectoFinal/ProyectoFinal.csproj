@@ -93,6 +93,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BeautyBaseDbDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="consulta\ConsultaCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consulta\ConsultaCitas.Designer.cs">
+      <DependentUpon>ConsultaCitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="consulta\ConsultaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
       <DependentUpon>ReporteServicios.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="consulta\ConsultaCitas.resx">
+      <DependentUpon>ConsultaCitas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="consulta\ConsultaClientes.resx">
       <DependentUpon>ConsultaClientes.cs</DependentUpon>
     </EmbeddedResource>

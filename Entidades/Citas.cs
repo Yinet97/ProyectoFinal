@@ -10,10 +10,8 @@ namespace Entidades
     {
         [Key]
         public int CitaId { get; set; }
-     //   public int Clienteid { get; set; }
         public string NombreCliente { get; set; }
-        public DateTime Fecha { get; set; }
-        public DateTime Hora { get; set; }
+        public DateTime FechaHora { get; set; }
 
     }
 }

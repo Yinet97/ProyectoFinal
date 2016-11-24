@@ -51,6 +51,7 @@
             this.serviciosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CitasBoton = new System.Windows.Forms.Button();
+            this.ConsultarCitasBoton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.panel1.Controls.Add(this.usuarioTexBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(134, 83);
+            this.panel1.Location = new System.Drawing.Point(258, 122);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(478, 291);
             this.panel1.TabIndex = 0;
@@ -255,7 +256,7 @@
             // 
             this.CitasBoton.BackColor = System.Drawing.Color.Cornsilk;
             this.CitasBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CitasBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitasBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CitasBoton.Location = new System.Drawing.Point(9, 83);
             this.CitasBoton.Name = "CitasBoton";
             this.CitasBoton.Size = new System.Drawing.Size(120, 56);
@@ -264,6 +265,19 @@
             this.CitasBoton.UseVisualStyleBackColor = false;
             this.CitasBoton.Click += new System.EventHandler(this.CitasBoton_Click);
             // 
+            // ConsultarCitasBoton
+            // 
+            this.ConsultarCitasBoton.BackColor = System.Drawing.Color.OldLace;
+            this.ConsultarCitasBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConsultarCitasBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConsultarCitasBoton.Location = new System.Drawing.Point(135, 83);
+            this.ConsultarCitasBoton.Name = "ConsultarCitasBoton";
+            this.ConsultarCitasBoton.Size = new System.Drawing.Size(120, 56);
+            this.ConsultarCitasBoton.TabIndex = 3;
+            this.ConsultarCitasBoton.Text = "Consulta Citas";
+            this.ConsultarCitasBoton.UseVisualStyleBackColor = false;
+            this.ConsultarCitasBoton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +285,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 469);
+            this.Controls.Add(this.ConsultarCitasBoton);
             this.Controls.Add(this.CitasBoton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -312,5 +327,6 @@
         private System.Windows.Forms.ToolStripMenuItem empleadasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem2;
         private System.Windows.Forms.Button CitasBoton;
+        private System.Windows.Forms.Button ConsultarCitasBoton;
     }
 }

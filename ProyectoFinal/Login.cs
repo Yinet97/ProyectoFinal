@@ -125,5 +125,11 @@ namespace ProyectoFinal
             Registros.RegistroCitas rc = new Registros.RegistroCitas();
             rc.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            consulta.ConsultaCitas cc = new consulta.ConsultaCitas();
+            cc.Show();
+        }
     }
 }

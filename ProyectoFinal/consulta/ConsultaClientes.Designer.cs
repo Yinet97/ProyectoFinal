@@ -58,6 +58,7 @@
             // 
             // listadoConsulta
             // 
+            this.listadoConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.listadoConsulta.BackgroundColor = System.Drawing.Color.White;
             this.listadoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listadoConsulta.GridColor = System.Drawing.Color.LavenderBlush;

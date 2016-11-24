@@ -45,10 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.IdTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -255,6 +255,14 @@
             this.panel1.Size = new System.Drawing.Size(739, 350);
             this.panel1.TabIndex = 35;
             // 
+            // FechaDateTimePicker
+            // 
+            this.FechaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(303, 307);
+            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(248, 22);
+            this.FechaDateTimePicker.TabIndex = 37;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -265,14 +273,6 @@
             this.label8.Size = new System.Drawing.Size(30, 23);
             this.label8.TabIndex = 36;
             this.label8.Text = "ID";
-            // 
-            // IdTextBox
-            // 
-            this.IdTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdTextBox.Location = new System.Drawing.Point(303, 24);
-            this.IdTextBox.Name = "IdTextBox";
-            this.IdTextBox.Size = new System.Drawing.Size(61, 23);
-            this.IdTextBox.TabIndex = 35;
             // 
             // label9
             // 
@@ -285,13 +285,13 @@
             this.label9.TabIndex = 37;
             this.label9.Text = "Fecha Entrada";
             // 
-            // FechaDateTimePicker
+            // IdTextBox
             // 
-            this.FechaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(303, 307);
-            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
-            this.FechaDateTimePicker.Size = new System.Drawing.Size(248, 22);
-            this.FechaDateTimePicker.TabIndex = 37;
+            this.IdTextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdTextBox.Location = new System.Drawing.Point(303, 24);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.Size = new System.Drawing.Size(61, 23);
+            this.IdTextBox.TabIndex = 35;
             // 
             // panel3
             // 
@@ -332,6 +332,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "RegistroEmpleada";
             this.Text = "RegistroEmpleada";
+            this.Load += new System.EventHandler(this.RegistroEmpleada_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

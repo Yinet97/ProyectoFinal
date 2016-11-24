@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Entidades;
 using DAL;
 using BLL;
+using System.Data.SqlClient;
 
 namespace ProyectoFinal.Registros
 {
@@ -53,8 +54,7 @@ namespace ProyectoFinal.Registros
                 var cita = CitasBll.Buscar(Convert.ToInt32(IdCitaTextBox.Text));
                 if (cita != null)
                 {
-                    CitaDateTimePicker.Text = cita.Fecha.ToString();
-                    HoraDateTimePicker.Text = cita.Hora.ToString();
+                    CitaDateTimePicker.Text = cita.FechaHora.ToString();
                     ClienteTextBox.Text = cita.NombreCliente;
                 }
                 else
@@ -69,9 +69,10 @@ namespace ProyectoFinal.Registros
         {
             int id = Convert.ToInt32(IdCitaTextBox.Text);
 
-            ClientesBll.Eliminar(id);
+            CitasBll.Eliminar(id);
             MessageBox.Show("Eliminado !");
             LimpiarCampos();
+            LlenarLista();
         }
 
         public void LimpiarCampos()
@@ -95,8 +96,7 @@ namespace ProyectoFinal.Registros
                 if (var == ClienteTextBox.Text)
                 {
                     date.NombreCliente = ClienteTextBox.Text;
-                    date.Fecha = CitaDateTimePicker.Value.Date;
-                    date.Hora = Convert.ToDateTime(HoraDateTimePicker.Value.ToShortTimeString());
+                    date.FechaHora = CitaDateTimePicker.Value;
 
                     if (CitasBll.Guardar(date))
                     {
@@ -117,28 +117,33 @@ namespace ProyectoFinal.Registros
             ListaCitaDataGridView.DataSource = null;
             ListaCitaDataGridView.DataSource = CitasBll.GetLista();
         }
+        
 
-    /*    public static AutoCompleteStringCollection LoadAutoComplete()
+        private void RegistroCitas_Load(object sender, EventArgs e)
         {
-            DataTable dt = LoadDataTable();
-
-            AutoCompleteStringCollection stringCol = new AutoCompleteStringCollection();
-
-            foreach (DataRow row in dt.Rows)
-            {
-                stringCol.Add(Convert.ToString(row["Nombre"]));
-            }
-
-            return stringCol;
+            AutoCompleteMode DataCollection = new AutoCompleteMode();
+            AutoCompletarTxt(DataCollection);
         }
 
-        private void ClienteTextBox_TextChanged(object sender, EventArgs e)
+        private void AutoCompletarTxt(AutoCompleteMode AuMode)
         {
-            ClienteTextBox.AutoCompleteCustomSource = DataHelper.LoadAutoComplete();
+            BeautyBaseDb db = new BeautyBaseDb();
+
             ClienteTextBox.AutoCompleteMode = AutoCompleteMode.Suggest;
             ClienteTextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-        } */
+            
+            AutoCompleteStringCollection aColl = new AutoCompleteStringCollection();
+            
 
+            var cl = from obj in db.Cliente
+                       select obj.Nombre;
+
+            foreach (string c in cl)
+            {
+                aColl.Add(c);
+            }
+            ClienteTextBox.AutoCompleteCustomSource = aColl;
+        }
         
     }
 }
