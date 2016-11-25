@@ -52,6 +52,7 @@
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CitasBoton = new System.Windows.Forms.Button();
             this.ConsultarCitasBoton = new System.Windows.Forms.Button();
+            this.FacturarBoton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -278,6 +279,19 @@
             this.ConsultarCitasBoton.UseVisualStyleBackColor = false;
             this.ConsultarCitasBoton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // FacturarBoton
+            // 
+            this.FacturarBoton.BackColor = System.Drawing.Color.Cornsilk;
+            this.FacturarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FacturarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FacturarBoton.Location = new System.Drawing.Point(9, 159);
+            this.FacturarBoton.Name = "FacturarBoton";
+            this.FacturarBoton.Size = new System.Drawing.Size(120, 56);
+            this.FacturarBoton.TabIndex = 4;
+            this.FacturarBoton.Text = "Facturar";
+            this.FacturarBoton.UseVisualStyleBackColor = false;
+            this.FacturarBoton.Click += new System.EventHandler(this.FacturarBoton_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +299,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 469);
+            this.Controls.Add(this.FacturarBoton);
             this.Controls.Add(this.ConsultarCitasBoton);
             this.Controls.Add(this.CitasBoton);
             this.Controls.Add(this.panel1);
@@ -328,5 +343,6 @@
         private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem2;
         private System.Windows.Forms.Button CitasBoton;
         private System.Windows.Forms.Button ConsultarCitasBoton;
+        private System.Windows.Forms.Button FacturarBoton;
     }
 }

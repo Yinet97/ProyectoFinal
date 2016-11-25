@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ActualizarBoton = new System.Windows.Forms.Button();
             this.ListaCitaDataGridView = new System.Windows.Forms.DataGridView();
             this.ClienteGroupBox = new System.Windows.Forms.GroupBox();
             this.BuscarClienteBoton = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.ActualizarBoton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListaCitaDataGridView)).BeginInit();
             this.ClienteGroupBox.SuspendLayout();
@@ -64,8 +64,19 @@
             this.panel1.Controls.Add(this.CitaGroupBox1);
             this.panel1.Location = new System.Drawing.Point(53, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(781, 322);
+            this.panel1.Size = new System.Drawing.Size(781, 347);
             this.panel1.TabIndex = 0;
+            // 
+            // ActualizarBoton
+            // 
+            this.ActualizarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualizarBoton.Location = new System.Drawing.Point(346, 297);
+            this.ActualizarBoton.Name = "ActualizarBoton";
+            this.ActualizarBoton.Size = new System.Drawing.Size(90, 37);
+            this.ActualizarBoton.TabIndex = 46;
+            this.ActualizarBoton.Text = "Actualizar";
+            this.ActualizarBoton.UseVisualStyleBackColor = true;
+            this.ActualizarBoton.Click += new System.EventHandler(this.ActualizarBoton_Click);
             // 
             // ListaCitaDataGridView
             // 
@@ -73,9 +84,9 @@
             this.ListaCitaDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.ListaCitaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaCitaDataGridView.GridColor = System.Drawing.Color.Maroon;
-            this.ListaCitaDataGridView.Location = new System.Drawing.Point(133, 202);
+            this.ListaCitaDataGridView.Location = new System.Drawing.Point(77, 202);
             this.ListaCitaDataGridView.Name = "ListaCitaDataGridView";
-            this.ListaCitaDataGridView.Size = new System.Drawing.Size(514, 80);
+            this.ListaCitaDataGridView.Size = new System.Drawing.Size(626, 89);
             this.ListaCitaDataGridView.TabIndex = 11;
             // 
             // ClienteGroupBox
@@ -212,7 +223,7 @@
             // NuevoBoton
             // 
             this.NuevoBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoBoton.Location = new System.Drawing.Point(63, 361);
+            this.NuevoBoton.Location = new System.Drawing.Point(81, 386);
             this.NuevoBoton.Name = "NuevoBoton";
             this.NuevoBoton.Size = new System.Drawing.Size(117, 49);
             this.NuevoBoton.TabIndex = 1;
@@ -223,7 +234,7 @@
             // EliminarBoton
             // 
             this.EliminarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliminarBoton.Location = new System.Drawing.Point(621, 361);
+            this.EliminarBoton.Location = new System.Drawing.Point(639, 386);
             this.EliminarBoton.Name = "EliminarBoton";
             this.EliminarBoton.Size = new System.Drawing.Size(117, 49);
             this.EliminarBoton.TabIndex = 2;
@@ -234,7 +245,7 @@
             // GuardarBoton
             // 
             this.GuardarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GuardarBoton.Location = new System.Drawing.Point(381, 361);
+            this.GuardarBoton.Location = new System.Drawing.Point(399, 386);
             this.GuardarBoton.Name = "GuardarBoton";
             this.GuardarBoton.Size = new System.Drawing.Size(117, 49);
             this.GuardarBoton.TabIndex = 3;
@@ -261,28 +272,17 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(110)))), ((int)(((byte)(99)))));
-            this.panel4.Location = new System.Drawing.Point(0, 382);
+            this.panel4.Location = new System.Drawing.Point(0, 404);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(880, 51);
+            this.panel4.Size = new System.Drawing.Size(880, 54);
             this.panel4.TabIndex = 45;
-            // 
-            // ActualizarBoton
-            // 
-            this.ActualizarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActualizarBoton.Location = new System.Drawing.Point(346, 288);
-            this.ActualizarBoton.Name = "ActualizarBoton";
-            this.ActualizarBoton.Size = new System.Drawing.Size(85, 28);
-            this.ActualizarBoton.TabIndex = 46;
-            this.ActualizarBoton.Text = "Actualizar";
-            this.ActualizarBoton.UseVisualStyleBackColor = true;
-            this.ActualizarBoton.Click += new System.EventHandler(this.ActualizarBoton_Click);
             // 
             // RegistroCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(880, 433);
+            this.ClientSize = new System.Drawing.Size(880, 458);
             this.Controls.Add(this.NuevoBoton);
             this.Controls.Add(this.GuardarBoton);
             this.Controls.Add(this.EliminarBoton);

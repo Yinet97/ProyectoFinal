@@ -131,5 +131,11 @@ namespace ProyectoFinal
             consulta.ConsultaCitas cc = new consulta.ConsultaCitas();
             cc.Show();
         }
+
+        private void FacturarBoton_Click(object sender, EventArgs e)
+        {
+            Factura f = new Factura();
+            f.Show();
+        }
     }
 }

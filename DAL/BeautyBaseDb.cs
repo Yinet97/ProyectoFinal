@@ -20,5 +20,7 @@ namespace DAL
         public virtual DbSet<Clientes> Cliente { get; set; }
         public virtual DbSet<Servicios> Servicio { get; set; }
         public virtual DbSet<Citas> Cita { get; set; }
+        public virtual DbSet<Facturas> Factura { get; set; }
+
     }
 }
