@@ -307,6 +307,7 @@
             this.AgregarBoton.TabIndex = 28;
             this.AgregarBoton.Text = "Agregar";
             this.AgregarBoton.UseVisualStyleBackColor = true;
+            this.AgregarBoton.Click += new System.EventHandler(this.AgregarBoton_Click);
             // 
             // TipoPagoTextBox
             // 

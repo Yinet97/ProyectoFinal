@@ -9,6 +9,7 @@ namespace Entidades
     public class Facturas
     {
         [Key]
+
         public int FacturaId { get; set; }
         public string NombreCliente { get; set; }
         public int MontoAdicional { get; set; }
@@ -19,5 +20,12 @@ namespace Entidades
         public string TipoPago { get; set; }
         public int ServicioId { get; set; }
         public double Total { get; set; }
+
+        public List<Servicios> Service { get; set; }
+
+        public Facturas()
+        {
+            this.Service = new List<Servicios>();
+        }
     }
 }

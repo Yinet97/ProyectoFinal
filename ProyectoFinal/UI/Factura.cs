@@ -17,6 +17,7 @@ namespace ProyectoFinal
         public Factura()
         {
             InitializeComponent();
+            LlenarComboBox();
         }
 
         private void GuardarBoton_Click(object sender, EventArgs e)
@@ -38,13 +39,48 @@ namespace ProyectoFinal
                 f.NombreCliente = NombreClienteTextBox.Text;
                 f.MontoAdicional = Convert.ToInt32(MontoAdicionalTextBox.Text);
                 f.TipoPago = TipoPagoTextBox.Text;
-                f.Total = 200.00f;
+                //.Total = 200.00f;
+                Calcular();
 
                 if(FacturasBll.Guardar(f))
                 {
                     MessageBox.Show("Guardado");
                 }
             }
+        }
+
+        public void Calcular()
+        {
+            int suma = 0;
+            int mas=0;
+            BeautyBaseDb db = new BeautyBaseDb();
+
+            var id = from ser in db.Servicio
+                         select ser.ServicioId;
+
+            var costos = from ser in db.Servicio
+                     select ser.Costo;
+
+            if (ServiciosDataGridView.RowCount > 0)
+            {
+                while(ServiciosDataGridView.RowCount == ServiciosDataGridView.RowCount)
+                {
+                     int valor1 = (int)ServiciosDataGridView.CurrentRow.Cells["ServicioId"].Value;
+                    //  var cost = (from c in db.Servicio where c.ServicioId == d select c.ServicioId + c.ServicioId);
+                    suma = suma + valor1;
+                    mas++;
+                }
+
+            }
+            TotalTextBox.Text = suma.ToString();
+            
+        }
+
+        private void LlenarComboBox()
+        {
+            ServiciosComboBox.DataSource = ServiciosBll.GetLista();
+            ServiciosComboBox.DisplayMember = "TipoServicio";
+            ServiciosComboBox.ValueMember = "ServicioId";
         }
 
 
@@ -74,6 +110,14 @@ namespace ProyectoFinal
                     MessageBox.Show("Esta Factura no Existe");
                 }
             }
+        }
+
+        Facturas factura = new Facturas();
+        private void AgregarBoton_Click(object sender, EventArgs e)
+        {
+            factura.Service.Add(new Servicios((int)ServiciosComboBox.SelectedValue, ServiciosComboBox.Text));
+            ServiciosDataGridView.DataSource = null;
+            ServiciosDataGridView.DataSource = factura.Service;
         }
     }
 }

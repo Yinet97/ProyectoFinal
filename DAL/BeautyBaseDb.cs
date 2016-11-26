@@ -22,5 +22,18 @@ namespace DAL
         public virtual DbSet<Citas> Cita { get; set; }
         public virtual DbSet<Facturas> Factura { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Facturas>()
+                .HasMany<Servicios>(g => g.Service)
+                .WithMany(e => e.Facturas)
+                .Map(ge =>
+                {
+                    ge.MapLeftKey("ServicioId");
+                    ge.MapRightKey("FacturaId");
+                    ge.ToTable("FacturasServicios");
+                });
+        }
+
     }
 }
