@@ -100,5 +100,14 @@ namespace BLL
             lista = db.Cita.Where(u => u.CitaId == id).ToList();
             return lista;
         }
+
+     /*   public static List<Citas> GetListaFecha(DateTime fecha)
+        {
+            List<Citas> lista = new List<Citas>();
+            BeautyBaseDb db = new BeautyBaseDb();
+
+            lista = db.Cita.Where(u => u.FechaHora.Date > fecha.Date).ToList();
+            return lista;
+        } */
     }
 }

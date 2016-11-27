@@ -28,79 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.botonRegistrar = new System.Windows.Forms.Button();
-            this.botonEntrar = new System.Windows.Forms.Button();
             this.claveTexBox = new System.Windows.Forms.TextBox();
             this.usuarioTexBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.regEmpleadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviciosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviciosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CitasBoton = new System.Windows.Forms.Button();
-            this.ConsultarCitasBoton = new System.Windows.Forms.Button();
-            this.FacturarBoton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.botonRegistrar = new System.Windows.Forms.Button();
+            this.botonEntrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.botonRegistrar);
             this.panel1.Controls.Add(this.botonEntrar);
             this.panel1.Controls.Add(this.claveTexBox);
             this.panel1.Controls.Add(this.usuarioTexBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(258, 122);
+            this.panel1.Location = new System.Drawing.Point(171, 62);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(478, 291);
-            this.panel1.TabIndex = 0;
-            // 
-            // botonRegistrar
-            // 
-            this.botonRegistrar.BackColor = System.Drawing.Color.MistyRose;
-            this.botonRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRegistrar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRegistrar.Location = new System.Drawing.Point(324, 231);
-            this.botonRegistrar.Name = "botonRegistrar";
-            this.botonRegistrar.Size = new System.Drawing.Size(141, 45);
-            this.botonRegistrar.TabIndex = 5;
-            this.botonRegistrar.Text = "Registar";
-            this.botonRegistrar.UseVisualStyleBackColor = false;
-            this.botonRegistrar.Click += new System.EventHandler(this.botonRegistrar_Click);
-            // 
-            // botonEntrar
-            // 
-            this.botonEntrar.BackColor = System.Drawing.Color.Pink;
-            this.botonEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonEntrar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonEntrar.Location = new System.Drawing.Point(196, 231);
-            this.botonEntrar.Name = "botonEntrar";
-            this.botonEntrar.Size = new System.Drawing.Size(105, 45);
-            this.botonEntrar.TabIndex = 4;
-            this.botonEntrar.Text = "Entrar";
-            this.botonEntrar.UseVisualStyleBackColor = false;
-            this.botonEntrar.Click += new System.EventHandler(this.botonEntrar_Click);
+            this.panel1.Size = new System.Drawing.Size(478, 351);
+            this.panel1.TabIndex = 1;
             // 
             // claveTexBox
             // 
             this.claveTexBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.claveTexBox.Location = new System.Drawing.Point(95, 176);
+            this.claveTexBox.Location = new System.Drawing.Point(96, 248);
             this.claveTexBox.Name = "claveTexBox";
             this.claveTexBox.Size = new System.Drawing.Size(319, 27);
             this.claveTexBox.TabIndex = 3;
@@ -108,7 +67,7 @@
             // usuarioTexBox
             // 
             this.usuarioTexBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuarioTexBox.Location = new System.Drawing.Point(95, 93);
+            this.usuarioTexBox.Location = new System.Drawing.Point(96, 192);
             this.usuarioTexBox.Name = "usuarioTexBox";
             this.usuarioTexBox.Size = new System.Drawing.Size(319, 27);
             this.usuarioTexBox.TabIndex = 2;
@@ -117,7 +76,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 140);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(50, 222);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 23);
             this.label2.TabIndex = 1;
@@ -127,222 +87,84 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 52);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(50, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
-            // menuStrip1
+            // pictureBox1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarToolStripMenuItem,
-            this.consultaToolStripMenuItem,
-            this.reporteToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(759, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.pictureBox1.Image = global::ProyectoFinal.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(174, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(164, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
-            // registrarToolStripMenuItem
+            // botonRegistrar
             // 
-            this.registrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.regEmpleadasToolStripMenuItem,
-            this.clientesToolStripMenuItem,
-            this.serviciosToolStripMenuItem});
-            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.registrarToolStripMenuItem.Text = "Registrar";
+            this.botonRegistrar.BackColor = System.Drawing.Color.Indigo;
+            this.botonRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRegistrar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRegistrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.botonRegistrar.Image = global::ProyectoFinal.Properties.Resources.login__1_;
+            this.botonRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonRegistrar.Location = new System.Drawing.Point(356, 292);
+            this.botonRegistrar.Name = "botonRegistrar";
+            this.botonRegistrar.Size = new System.Drawing.Size(107, 45);
+            this.botonRegistrar.TabIndex = 5;
+            this.botonRegistrar.Text = "Registar";
+            this.botonRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.botonRegistrar.UseVisualStyleBackColor = false;
+            this.botonRegistrar.Click += new System.EventHandler(this.botonRegistrar_Click);
             // 
-            // regEmpleadasToolStripMenuItem
+            // botonEntrar
             // 
-            this.regEmpleadasToolStripMenuItem.Name = "regEmpleadasToolStripMenuItem";
-            this.regEmpleadasToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.regEmpleadasToolStripMenuItem.Text = "Empleadas";
-            this.regEmpleadasToolStripMenuItem.Click += new System.EventHandler(this.regEmpleadasToolStripMenuItem_Click);
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // serviciosToolStripMenuItem
-            // 
-            this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.serviciosToolStripMenuItem.Text = "Servicios";
-            this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
-            // 
-            // consultaToolStripMenuItem
-            // 
-            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem,
-            this.empleadasToolStripMenuItem,
-            this.clientesToolStripMenuItem1,
-            this.serviciosToolStripMenuItem1});
-            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.consultaToolStripMenuItem.Text = "Consultar";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
-            // 
-            // empleadasToolStripMenuItem
-            // 
-            this.empleadasToolStripMenuItem.Name = "empleadasToolStripMenuItem";
-            this.empleadasToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.empleadasToolStripMenuItem.Text = "Empleadas";
-            this.empleadasToolStripMenuItem.Click += new System.EventHandler(this.empleadasToolStripMenuItem_Click);
-            // 
-            // clientesToolStripMenuItem1
-            // 
-            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
-            this.clientesToolStripMenuItem1.Text = "Clientes";
-            this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
-            // 
-            // serviciosToolStripMenuItem1
-            // 
-            this.serviciosToolStripMenuItem1.Name = "serviciosToolStripMenuItem1";
-            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
-            this.serviciosToolStripMenuItem1.Text = "Servicios";
-            this.serviciosToolStripMenuItem1.Click += new System.EventHandler(this.serviciosToolStripMenuItem1_Click);
-            // 
-            // reporteToolStripMenuItem
-            // 
-            this.reporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem2,
-            this.empleadasToolStripMenuItem1,
-            this.serviciosToolStripMenuItem2});
-            this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
-            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.reporteToolStripMenuItem.Text = "Reporte";
-            // 
-            // clientesToolStripMenuItem2
-            // 
-            this.clientesToolStripMenuItem2.Name = "clientesToolStripMenuItem2";
-            this.clientesToolStripMenuItem2.Size = new System.Drawing.Size(131, 22);
-            this.clientesToolStripMenuItem2.Text = "Clientes";
-            this.clientesToolStripMenuItem2.Click += new System.EventHandler(this.clientesToolStripMenuItem2_Click);
-            // 
-            // empleadasToolStripMenuItem1
-            // 
-            this.empleadasToolStripMenuItem1.Name = "empleadasToolStripMenuItem1";
-            this.empleadasToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
-            this.empleadasToolStripMenuItem1.Text = "Empleadas";
-            this.empleadasToolStripMenuItem1.Click += new System.EventHandler(this.empleadasToolStripMenuItem1_Click);
-            // 
-            // serviciosToolStripMenuItem2
-            // 
-            this.serviciosToolStripMenuItem2.Name = "serviciosToolStripMenuItem2";
-            this.serviciosToolStripMenuItem2.Size = new System.Drawing.Size(131, 22);
-            this.serviciosToolStripMenuItem2.Text = "Servicios";
-            this.serviciosToolStripMenuItem2.Click += new System.EventHandler(this.serviciosToolStripMenuItem2_Click);
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // CitasBoton
-            // 
-            this.CitasBoton.BackColor = System.Drawing.Color.Cornsilk;
-            this.CitasBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CitasBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CitasBoton.Location = new System.Drawing.Point(9, 83);
-            this.CitasBoton.Name = "CitasBoton";
-            this.CitasBoton.Size = new System.Drawing.Size(120, 56);
-            this.CitasBoton.TabIndex = 2;
-            this.CitasBoton.Text = "Citas";
-            this.CitasBoton.UseVisualStyleBackColor = false;
-            this.CitasBoton.Click += new System.EventHandler(this.CitasBoton_Click);
-            // 
-            // ConsultarCitasBoton
-            // 
-            this.ConsultarCitasBoton.BackColor = System.Drawing.Color.OldLace;
-            this.ConsultarCitasBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConsultarCitasBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConsultarCitasBoton.Location = new System.Drawing.Point(135, 83);
-            this.ConsultarCitasBoton.Name = "ConsultarCitasBoton";
-            this.ConsultarCitasBoton.Size = new System.Drawing.Size(120, 56);
-            this.ConsultarCitasBoton.TabIndex = 3;
-            this.ConsultarCitasBoton.Text = "Consulta Citas";
-            this.ConsultarCitasBoton.UseVisualStyleBackColor = false;
-            this.ConsultarCitasBoton.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // FacturarBoton
-            // 
-            this.FacturarBoton.BackColor = System.Drawing.Color.Cornsilk;
-            this.FacturarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FacturarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FacturarBoton.Location = new System.Drawing.Point(9, 159);
-            this.FacturarBoton.Name = "FacturarBoton";
-            this.FacturarBoton.Size = new System.Drawing.Size(120, 56);
-            this.FacturarBoton.TabIndex = 4;
-            this.FacturarBoton.Text = "Facturar";
-            this.FacturarBoton.UseVisualStyleBackColor = false;
-            this.FacturarBoton.Click += new System.EventHandler(this.FacturarBoton_Click);
+            this.botonEntrar.BackColor = System.Drawing.Color.Thistle;
+            this.botonEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonEntrar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonEntrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.botonEntrar.Image = global::ProyectoFinal.Properties.Resources.puert;
+            this.botonEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonEntrar.Location = new System.Drawing.Point(237, 292);
+            this.botonEntrar.Name = "botonEntrar";
+            this.botonEntrar.Size = new System.Drawing.Size(101, 45);
+            this.botonEntrar.TabIndex = 4;
+            this.botonEntrar.Text = "Entrar";
+            this.botonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.botonEntrar.UseVisualStyleBackColor = false;
+            this.botonEntrar.Click += new System.EventHandler(this.botonEntrar_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(759, 469);
-            this.Controls.Add(this.FacturarBoton);
-            this.Controls.Add(this.ConsultarCitasBoton);
-            this.Controls.Add(this.CitasBoton);
+            this.BackColor = System.Drawing.Color.Thistle;
+            this.ClientSize = new System.Drawing.Size(811, 455);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button botonRegistrar;
         private System.Windows.Forms.Button botonEntrar;
         private System.Windows.Forms.TextBox claveTexBox;
         private System.Windows.Forms.TextBox usuarioTexBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem regEmpleadasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem empleadasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem empleadasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem2;
-        private System.Windows.Forms.Button CitasBoton;
-        private System.Windows.Forms.Button ConsultarCitasBoton;
-        private System.Windows.Forms.Button FacturarBoton;
     }
 }

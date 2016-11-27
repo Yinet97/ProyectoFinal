@@ -22,9 +22,8 @@ namespace ProyectoFinal
 
         private void GuardarBoton_Click(object sender, EventArgs e)
         {
-            // agregarle esto despues que haga el detalle  || string.IsNullOrEmpty(ServiciosDataGridView.DataSource.ToString())
-            if (string.IsNullOrEmpty(NombreClienteTextBox.Text) 
-                 )
+            if (string.IsNullOrEmpty(NombreClienteTextBox.Text)
+                 || string.IsNullOrEmpty(ServiciosDataGridView.DataSource.ToString()))
             {
                 MessageBox.Show("Dejaste campos importantes Vacios");
             }
@@ -34,13 +33,14 @@ namespace ProyectoFinal
                 f.Fecha = DateTime.Now;
                 f.Comentario = ComentarioRichTextBox.Text;
                 f.Descuento = Convert.ToInt32(DescuentoTextBox.Text);
+                f.DescuentoPorciento = Convert.ToDecimal(PorcientoDescuentoTextBox.Text);
                 f.Impuesto = Convert.ToInt32(ImpuestoTextBox.Text);
                 f.ServicioId = 1;
                 f.NombreCliente = NombreClienteTextBox.Text;
                 f.MontoAdicional = Convert.ToInt32(MontoAdicionalTextBox.Text);
                 f.TipoPago = TipoPagoTextBox.Text;
-                //.Total = 200.00f;
-                Calcular();
+                f.Total = Convert.ToDecimal(TotalTextBox.Text);
+                f.SubTotal = Convert.ToDecimal(SubTotalTextBox.Text);
 
                 if(FacturasBll.Guardar(f))
                 {
@@ -51,29 +51,57 @@ namespace ProyectoFinal
 
         public void Calcular()
         {
-            int suma = 0;
-            int mas=0;
+            Decimal suma = 0.00m;
             BeautyBaseDb db = new BeautyBaseDb();
-
-            var id = from ser in db.Servicio
-                         select ser.ServicioId;
-
+            
             var costos = from ser in db.Servicio
                      select ser.Costo;
 
-            if (ServiciosDataGridView.RowCount > 0)
+            const int COLUMNA = 2;
+
+            if(ServiciosDataGridView.Rows.Count > 0)
             {
-                while(ServiciosDataGridView.RowCount == ServiciosDataGridView.RowCount)
+                 foreach (DataGridViewRow row in ServiciosDataGridView.Rows)
                 {
-                     int valor1 = (int)ServiciosDataGridView.CurrentRow.Cells["ServicioId"].Value;
-                    //  var cost = (from c in db.Servicio where c.ServicioId == d select c.ServicioId + c.ServicioId);
-                    suma = suma + valor1;
-                    mas++;
+                     suma += (int)row.Cells[COLUMNA].Value;
+                     TotalTextBox.Text = suma.ToString();
+                     SubTotalTextBox.Text = suma.ToString();
+                }
+                 if(MontoAdicionalTextBox.Text != null)
+                {
+                    suma = suma + Convert.ToInt32(MontoAdicionalTextBox.Text);
+                    TotalTextBox.Text = suma.ToString();
+                }
+
+                if(DescuentoTextBox.Text != null)
+                 {
+                        suma = suma - Convert.ToInt32(DescuentoTextBox.Text);
+                        TotalTextBox.Text = suma.ToString();
+                        SubTotalTextBox.Text = suma.ToString();
+                }
+
+                if (PorcientoDescuentoTextBox.Text != null)
+                {
+                    Decimal porcent = 0.00m;
+                    porcent = (Convert.ToDecimal(PorcientoDescuentoTextBox.Text) * Convert.ToDecimal(suma)) / 100;
+                    suma = Convert.ToDecimal(suma) - porcent;
+                    TotalTextBox.Text = suma.ToString();
+                    SubTotalTextBox.Text = suma.ToString();
+                }
+
+                if (ImpuestoTextBox.Text != null)
+                {
+                    Decimal porcent = 0.00m;
+                    porcent = (Convert.ToDecimal(ImpuestoTextBox.Text) * Convert.ToDecimal(suma)) / 100;
+                    suma = Convert.ToDecimal(suma) + porcent;
+                    TotalTextBox.Text = suma.ToString();
                 }
 
             }
-            TotalTextBox.Text = suma.ToString();
-            
+            else
+            {
+                MessageBox.Show("No tienes servicios para registar");
+            }
         }
 
         private void LlenarComboBox()
@@ -115,9 +143,68 @@ namespace ProyectoFinal
         Facturas factura = new Facturas();
         private void AgregarBoton_Click(object sender, EventArgs e)
         {
-            factura.Service.Add(new Servicios((int)ServiciosComboBox.SelectedValue, ServiciosComboBox.Text));
+            List<Servicios> lista = new List<Servicios>();
+            lista = ServiciosBll.GetLista(Convert.ToInt32(ServiciosComboBox.SelectedValue));
+            factura.Service.AddRange(lista);
             ServiciosDataGridView.DataSource = null;
             ServiciosDataGridView.DataSource = factura.Service;
+
+            Calcular();
         }
+
+        public void Limpiar()
+        {
+            DescuentoTextBox.Text = 0.ToString();
+            PorcientoDescuentoTextBox.Text = 0.ToString();
+            IdTextBox.Clear();
+            ImpuestoTextBox.Text = 18.ToString();
+            MontoAdicionalTextBox.Text = 0.ToString();
+            ComentarioRichTextBox.Text = "Comentario";
+            TipoPagoTextBox.Clear();
+            ServiciosDataGridView.DataSource = null;
+            NombreClienteTextBox.Clear();
+            TotalTextBox.Text = 0.00m.ToString();
+        }
+
+        private void NuevoBoton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Factura_Load(object sender, EventArgs e)
+        {
+            AutoCompleteMode DataCollection = new AutoCompleteMode();
+            AutoCompletarTxt(DataCollection);
+        }
+
+        private void AutoCompletarTxt(AutoCompleteMode AuMode)
+        {
+            BeautyBaseDb db = new BeautyBaseDb();
+
+            NombreClienteTextBox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            NombreClienteTextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            AutoCompleteStringCollection aColl = new AutoCompleteStringCollection();
+
+
+            var cl = from obj in db.Cliente
+                     select obj.Nombre;
+
+            foreach (string c in cl)
+            {
+                aColl.Add(c);
+            }
+            NombreClienteTextBox.AutoCompleteCustomSource = aColl;
+        }
+
+        private void EliminarBoton_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(IdTextBox.Text);
+
+            CitasBll.Eliminar(id);
+            MessageBox.Show("Eliminad !");
+            Limpiar();
+        }
+        
     }
 }

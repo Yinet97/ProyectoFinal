@@ -22,9 +22,9 @@ namespace ProyectoFinal
 
         private void Boton_Guardar_Click(object sender, EventArgs e)
         {
-           // string type = Tipos_ConmoBox.SelectedValue.ToString();
+            string type = TiposComboBox.SelectedValue.ToString();
 
-            if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(ClaveTextBox.Text) || string.IsNullOrEmpty(IdTextBox.Text))
+            if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(ClaveTextBox.Text))
             {
                 MessageBox.Show("Dejaste un campo vacio");
 
@@ -35,7 +35,7 @@ namespace ProyectoFinal
 
                 user.Clave = ClaveTextBox.Text;
                 user.Nombre = NombreTextBox.Text;
-              //  user.Tipo = type;
+                user.Tipo = type;
 
 
                 if (TiposUsuariosBll.Insertar(user))
@@ -110,5 +110,12 @@ namespace ProyectoFinal
 
             }
         }
+
+        private void RegistroTiposUsuarios_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+            MinimizeBox = false;
+        }
+        
     }
 }

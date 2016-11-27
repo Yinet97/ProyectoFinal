@@ -13,7 +13,6 @@ namespace Entidades
         public int ServicioId { get; set; }
         public string TipoServicio { get; set; }
         public int Costo { get; set; }
-        public int PorcientoAdicional { get; set; }
 
         public List<Facturas> Facturas { get; set; }
 

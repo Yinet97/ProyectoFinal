@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCitas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.ActualizarBoton = new System.Windows.Forms.Button();
             this.ListaCitaDataGridView = new System.Windows.Forms.DataGridView();
@@ -57,7 +58,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.ActualizarBoton);
             this.panel1.Controls.Add(this.ListaCitaDataGridView);
             this.panel1.Controls.Add(this.ClienteGroupBox);
@@ -69,6 +70,7 @@
             // 
             // ActualizarBoton
             // 
+            this.ActualizarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ActualizarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ActualizarBoton.Location = new System.Drawing.Point(346, 297);
             this.ActualizarBoton.Name = "ActualizarBoton";
@@ -81,7 +83,7 @@
             // ListaCitaDataGridView
             // 
             this.ListaCitaDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ListaCitaDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.ListaCitaDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
             this.ListaCitaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaCitaDataGridView.GridColor = System.Drawing.Color.Maroon;
             this.ListaCitaDataGridView.Location = new System.Drawing.Point(77, 202);
@@ -107,6 +109,7 @@
             // 
             // BuscarClienteBoton
             // 
+            this.BuscarClienteBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BuscarClienteBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarClienteBoton.Location = new System.Drawing.Point(162, 32);
             this.BuscarClienteBoton.Name = "BuscarClienteBoton";
@@ -162,6 +165,7 @@
             this.CitaGroupBox1.Controls.Add(this.IdCitaTextBox);
             this.CitaGroupBox1.Controls.Add(this.label3);
             this.CitaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitaGroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CitaGroupBox1.Location = new System.Drawing.Point(388, 36);
             this.CitaGroupBox1.Name = "CitaGroupBox1";
             this.CitaGroupBox1.Size = new System.Drawing.Size(348, 149);
@@ -171,6 +175,7 @@
             // 
             // BuscarCitaBoton
             // 
+            this.BuscarCitaBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BuscarCitaBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarCitaBoton.Location = new System.Drawing.Point(154, 26);
             this.BuscarCitaBoton.Name = "BuscarCitaBoton";
@@ -222,6 +227,7 @@
             // 
             // NuevoBoton
             // 
+            this.NuevoBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NuevoBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoBoton.Location = new System.Drawing.Point(81, 386);
             this.NuevoBoton.Name = "NuevoBoton";
@@ -233,6 +239,7 @@
             // 
             // EliminarBoton
             // 
+            this.EliminarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarBoton.Location = new System.Drawing.Point(639, 386);
             this.EliminarBoton.Name = "EliminarBoton";
@@ -244,6 +251,7 @@
             // 
             // GuardarBoton
             // 
+            this.GuardarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarBoton.Location = new System.Drawing.Point(399, 386);
             this.GuardarBoton.Name = "GuardarBoton";
@@ -255,7 +263,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
+            this.panel3.BackColor = System.Drawing.Color.Purple;
             this.panel3.Location = new System.Drawing.Point(-4, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(884, 107);
@@ -263,7 +271,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
             this.panel2.Location = new System.Drawing.Point(-4, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 15);
@@ -271,7 +279,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(110)))), ((int)(((byte)(99)))));
+            this.panel4.BackColor = System.Drawing.Color.PaleVioletRed;
             this.panel4.Location = new System.Drawing.Point(0, 404);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(880, 54);
@@ -281,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(229)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(880, 458);
             this.Controls.Add(this.NuevoBoton);
             this.Controls.Add(this.GuardarBoton);
@@ -290,6 +298,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroCitas";
             this.Text = "Registro Citas";
             this.Load += new System.EventHandler(this.RegistroCitas_Load);

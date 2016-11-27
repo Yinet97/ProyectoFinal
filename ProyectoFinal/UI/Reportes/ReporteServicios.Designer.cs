@@ -30,23 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.beautyBaseDbDataSet2 = new ProyectoFinal.BeautyBaseDbDataSet2();
             this.beautyBaseDbDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ServiciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.beautyBaseDbDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.beautyBaseDbDataSet2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // beautyBaseDbDataSet2
             // 
-            this.beautyBaseDbDataSet2.DataSetName = "BeautyBaseDbDataSet2";
-            this.beautyBaseDbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // beautyBaseDbDataSet2BindingSource
             // 
-            this.beautyBaseDbDataSet2BindingSource.DataSource = this.beautyBaseDbDataSet2;
             this.beautyBaseDbDataSet2BindingSource.Position = 0;
             // 
             // reportViewer1
@@ -63,7 +58,6 @@
             // ServiciosBindingSource
             // 
             this.ServiciosBindingSource.DataMember = "Servicios";
-            this.ServiciosBindingSource.DataSource = this.beautyBaseDbDataSet2;
             // 
             // ReporteServicios
             // 
@@ -74,7 +68,6 @@
             this.Name = "ReporteServicios";
             this.Text = "ReporteServicios";
             this.Load += new System.EventHandler(this.ReporteServicios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.beautyBaseDbDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.beautyBaseDbDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -83,7 +76,6 @@
 
         #endregion
         private System.Windows.Forms.BindingSource beautyBaseDbDataSet2BindingSource;
-        private BeautyBaseDbDataSet2 beautyBaseDbDataSet2;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource ServiciosBindingSource;
     }

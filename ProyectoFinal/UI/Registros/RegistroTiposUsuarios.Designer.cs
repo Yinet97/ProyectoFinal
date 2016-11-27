@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroTiposUsuarios));
             this.TiposComboBox = new System.Windows.Forms.ComboBox();
             this.Boton_Buscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,6 +42,8 @@
             this.Boton_Guardar = new System.Windows.Forms.Button();
             this.Boton_Nuevo = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // TiposComboBox
@@ -57,6 +60,7 @@
             // 
             // Boton_Buscar
             // 
+            this.Boton_Buscar.BackColor = System.Drawing.Color.Transparent;
             this.Boton_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Boton_Buscar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Boton_Buscar.Image = global::ProyectoFinal.Properties.Resources._40px_Icono_buscar;
@@ -64,7 +68,7 @@
             this.Boton_Buscar.Name = "Boton_Buscar";
             this.Boton_Buscar.Size = new System.Drawing.Size(52, 39);
             this.Boton_Buscar.TabIndex = 5;
-            this.Boton_Buscar.UseVisualStyleBackColor = true;
+            this.Boton_Buscar.UseVisualStyleBackColor = false;
             this.Boton_Buscar.Click += new System.EventHandler(this.Boton_Buscar_Click_1);
             // 
             // label5
@@ -118,6 +122,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(171, 147);
@@ -129,6 +134,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.label2.Location = new System.Drawing.Point(150, 96);
@@ -186,18 +192,35 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(110)))), ((int)(((byte)(99)))));
-            this.panel4.Location = new System.Drawing.Point(-2, 173);
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(102, 64);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(688, 221);
+            this.panel4.Size = new System.Drawing.Size(480, 225);
             this.panel4.TabIndex = 48;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(690, 174);
+            this.panel1.TabIndex = 49;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkMagenta;
+            this.panel2.Location = new System.Drawing.Point(0, 164);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(690, 228);
+            this.panel2.TabIndex = 50;
             // 
             // RegistroTiposUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Bisque;
+            this.BackColor = System.Drawing.Color.Plum;
             this.ClientSize = new System.Drawing.Size(688, 393);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.TiposComboBox);
             this.Controls.Add(this.Boton_Eliminar);
             this.Controls.Add(this.Boton_Buscar);
@@ -207,12 +230,15 @@
             this.Controls.Add(this.ClaveTextBox);
             this.Controls.Add(this.NombreTextBox);
             this.Controls.Add(this.IdTextBox);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroTiposUsuarios";
             this.Text = "RegistroTiposUsuarios";
+            this.Load += new System.EventHandler(this.RegistroTiposUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +259,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

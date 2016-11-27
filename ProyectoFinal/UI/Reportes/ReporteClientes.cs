@@ -20,9 +20,7 @@ namespace ProyectoFinal
         private void ReporteClientes_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'BeautyBaseDbDataSet1.Clientes' table. You can move, or remove it, as needed.
-            this.ClientesTableAdapter.Fill(this.BeautyBaseDbDataSet1.Clientes);
-
-            this.ReporteView.RefreshReport();
+            
         }
 
         private void ReporteView_Load(object sender, EventArgs e)

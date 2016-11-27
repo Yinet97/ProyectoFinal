@@ -14,12 +14,15 @@ namespace Entidades
         public string NombreCliente { get; set; }
         public int MontoAdicional { get; set; }
         public int Descuento { get; set; }
+        public Decimal DescuentoPorciento { get; set; }
         public string Comentario { get; set; }
         public int Impuesto { get; set; }
         public DateTime Fecha { get; set; }
         public string TipoPago { get; set; }
         public int ServicioId { get; set; }
-        public double Total { get; set; }
+        public decimal Total { get; set; }
+        public Decimal SubTotal { get; set; }
+
 
         public List<Servicios> Service { get; set; }
 

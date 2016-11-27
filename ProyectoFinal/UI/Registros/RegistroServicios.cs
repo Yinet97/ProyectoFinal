@@ -32,7 +32,6 @@ namespace ProyectoFinal.Registros
 
                 service.TipoServicio = TipoTextBox.Text;
                 service.Costo = Convert.ToInt32(CostoTextBox.Text);
-                service.PorcientoAdicional = Convert.ToInt32(PorcientoTextBox.Text);
 
                 if (ServiciosBll.Guardar(service))
                 {
@@ -73,7 +72,6 @@ namespace ProyectoFinal.Registros
             {
                 TipoTextBox.Text = ser.TipoServicio;
                 CostoTextBox.Text = ser.Costo.ToString();
-                PorcientoTextBox.Text = ser.PorcientoAdicional.ToString();
             }
             else
             {
@@ -91,7 +89,6 @@ namespace ProyectoFinal.Registros
             IDtextBox.Clear();
             TipoTextBox.Clear();
             CostoTextBox.Clear();
-            PorcientoTextBox.Clear();
         }
     }
 }

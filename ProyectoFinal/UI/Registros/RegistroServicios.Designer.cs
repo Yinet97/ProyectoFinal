@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroServicios));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.BuscarBoton = new System.Windows.Forms.Button();
             this.CostoTextBox = new System.Windows.Forms.TextBox();
             this.TipoTextBox = new System.Windows.Forms.TextBox();
@@ -40,7 +40,6 @@
             this.EliminarBoton = new System.Windows.Forms.Button();
             this.GuardarBoton = new System.Windows.Forms.Button();
             this.NuevoBoton = new System.Windows.Forms.Button();
-            this.PorcientoTextBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -50,8 +49,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.PorcientoTextBox);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.BuscarBoton);
             this.panel1.Controls.Add(this.CostoTextBox);
             this.panel1.Controls.Add(this.TipoTextBox);
@@ -61,18 +58,8 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(133, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(343, 240);
+            this.panel1.Size = new System.Drawing.Size(357, 221);
             this.panel1.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 19);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Porciento Adicional";
             // 
             // BuscarBoton
             // 
@@ -192,18 +179,9 @@
             this.NuevoBoton.UseVisualStyleBackColor = false;
             this.NuevoBoton.Click += new System.EventHandler(this.NuevoBoton_Click);
             // 
-            // PorcientoTextBox
-            // 
-            this.PorcientoTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PorcientoTextBox.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.PorcientoTextBox.Location = new System.Drawing.Point(152, 190);
-            this.PorcientoTextBox.Name = "PorcientoTextBox";
-            this.PorcientoTextBox.Size = new System.Drawing.Size(168, 26);
-            this.PorcientoTextBox.TabIndex = 35;
-            // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
+            this.panel3.BackColor = System.Drawing.Color.Purple;
             this.panel3.Location = new System.Drawing.Point(0, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(664, 107);
@@ -211,7 +189,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(664, 15);
@@ -219,7 +197,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(110)))), ((int)(((byte)(99)))));
+            this.panel4.BackColor = System.Drawing.Color.PaleVioletRed;
             this.panel4.Location = new System.Drawing.Point(0, 380);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(670, 51);
@@ -229,7 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(229)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(664, 429);
             this.Controls.Add(this.EliminarBoton);
             this.Controls.Add(this.GuardarBoton);
@@ -238,6 +216,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroServicios";
             this.Text = "Registro Servicios";
             this.panel1.ResumeLayout(false);
@@ -259,8 +238,6 @@
         private System.Windows.Forms.Button GuardarBoton;
         private System.Windows.Forms.Button NuevoBoton;
         private System.Windows.Forms.Button BuscarBoton;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox PorcientoTextBox;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;

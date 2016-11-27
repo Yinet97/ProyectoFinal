@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroEmpleada));
             this.SueldoFijoTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.BuscarBoton = new System.Windows.Forms.Button();
@@ -295,7 +296,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
+            this.panel3.BackColor = System.Drawing.Color.Purple;
             this.panel3.Location = new System.Drawing.Point(0, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(889, 107);
@@ -303,7 +304,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(889, 15);
@@ -311,7 +312,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(110)))), ((int)(((byte)(99)))));
+            this.panel4.BackColor = System.Drawing.Color.PaleVioletRed;
             this.panel4.Location = new System.Drawing.Point(0, 443);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(889, 51);
@@ -321,7 +322,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(229)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(850, 492);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.EliminarBoton);
@@ -330,6 +331,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroEmpleada";
             this.Text = "RegistroEmpleada";
             this.Load += new System.EventHandler(this.RegistroEmpleada_Load);

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroClientes));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BuscarBoton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.IDtextBox = new System.Windows.Forms.TextBox();
             this.DireccionTextBox = new System.Windows.Forms.TextBox();
@@ -42,7 +44,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.BuscarBoton = new System.Windows.Forms.Button();
             this.EliminarBoton = new System.Windows.Forms.Button();
             this.GuardarBoton = new System.Windows.Forms.Button();
             this.NuevoBoton = new System.Windows.Forms.Button();
@@ -67,6 +68,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(652, 294);
             this.panel1.TabIndex = 40;
+            // 
+            // BuscarBoton
+            // 
+            this.BuscarBoton.BackColor = System.Drawing.Color.Transparent;
+            this.BuscarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BuscarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarBoton.Image = global::ProyectoFinal.Properties.Resources._40px_Icono_buscar;
+            this.BuscarBoton.Location = new System.Drawing.Point(285, 35);
+            this.BuscarBoton.Name = "BuscarBoton";
+            this.BuscarBoton.Size = new System.Drawing.Size(65, 41);
+            this.BuscarBoton.TabIndex = 32;
+            this.BuscarBoton.UseVisualStyleBackColor = false;
+            this.BuscarBoton.Click += new System.EventHandler(this.BuscarBoton_Click);
             // 
             // label8
             // 
@@ -165,7 +179,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(889, 15);
@@ -173,7 +187,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(101)))));
+            this.panel3.BackColor = System.Drawing.Color.Purple;
             this.panel3.Location = new System.Drawing.Point(0, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(889, 107);
@@ -181,24 +195,11 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(110)))), ((int)(((byte)(99)))));
+            this.panel4.BackColor = System.Drawing.Color.PaleVioletRed;
             this.panel4.Location = new System.Drawing.Point(0, 414);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(889, 51);
             this.panel4.TabIndex = 37;
-            // 
-            // BuscarBoton
-            // 
-            this.BuscarBoton.BackColor = System.Drawing.Color.Transparent;
-            this.BuscarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BuscarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarBoton.Image = global::ProyectoFinal.Properties.Resources._40px_Icono_buscar;
-            this.BuscarBoton.Location = new System.Drawing.Point(285, 35);
-            this.BuscarBoton.Name = "BuscarBoton";
-            this.BuscarBoton.Size = new System.Drawing.Size(65, 41);
-            this.BuscarBoton.TabIndex = 32;
-            this.BuscarBoton.UseVisualStyleBackColor = false;
-            this.BuscarBoton.Click += new System.EventHandler(this.BuscarBoton_Click);
             // 
             // EliminarBoton
             // 
@@ -252,7 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(229)))), ((int)(((byte)(245)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(889, 464);
             this.Controls.Add(this.panel1);
@@ -262,8 +263,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroClientes";
             this.Text = "Registro Clientes";
+            this.Load += new System.EventHandler(this.RegistroClientes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

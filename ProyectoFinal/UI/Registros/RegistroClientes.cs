@@ -99,6 +99,11 @@ namespace ProyectoFinal.Registros
         {
             LimpiarCampos();
         }
-        
+
+        private void RegistroClientes_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+            MinimizeBox = false;
+        }
     }
 }

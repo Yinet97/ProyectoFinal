@@ -122,6 +122,9 @@ namespace ProyectoFinal
         {
             AutoCompleteMode DataCollection = new AutoCompleteMode();
             AutoCompletarTxt(DataCollection);
+
+            MaximizeBox = false;
+            MinimizeBox = false;
         }
 
         private void AutoCompletarTxt(AutoCompleteMode AuMode)

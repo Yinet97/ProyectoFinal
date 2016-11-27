@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Entidades;
 using BLL;
+using DAL;
 
 namespace ProyectoFinal.consulta
 {
@@ -34,5 +35,16 @@ namespace ProyectoFinal.consulta
             listadoConsulta.DataSource = lista;
 
         }
+
+       /* private void FiltrarFechaBoton_Click(object sender, EventArgs e)
+        {
+            BeautyBaseDb db = new BeautyBaseDb();
+
+            if(DesdeDateTimePicker.Value.Date < HastaDateTimePicker.Value.Date)
+            {
+                lista = CitasBll.GetLista(DesdeDateTimePicker.Value,HastaDateTimePicker.Value);
+            }
+            listadoConsulta.DataSource = lista;
+        }*/
     }
 }

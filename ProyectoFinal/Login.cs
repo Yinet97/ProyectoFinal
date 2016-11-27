@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DAL;
 using Entidades;
+using BLL;
 
 namespace ProyectoFinal
 {
@@ -18,19 +19,13 @@ namespace ProyectoFinal
             InitializeComponent();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            consultaUsuarios c = new consultaUsuarios();
-            c.Show();
-        }
-
         private void botonEntrar_Click(object sender, EventArgs e)
         {
             string username = usuarioTexBox.Text;
             string clave = claveTexBox.Text;
 
             if (String.IsNullOrEmpty(usuarioTexBox.Text) || String.IsNullOrEmpty(claveTexBox.Text))
-                {
+            {
                 MessageBox.Show("Dejaste campos Vacios");
             }
             else
@@ -42,8 +37,10 @@ namespace ProyectoFinal
 
                     if (user == username || passw == clave)
                     {
-                        consultaUsuarios c = new consultaUsuarios();
-                        c.Show();
+                        Programa c = new Programa();
+                        this.Hide();
+                        c.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
@@ -59,83 +56,10 @@ namespace ProyectoFinal
             rtu.Show();
         }
 
-        private void regEmpleadasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RegistroEmpleada re = new RegistroEmpleada();
-            re.Show();
-        }
-
-        private void empleadasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            consulta.ConsultaEmpleadas ce = new consulta.ConsultaEmpleadas();
-            ce.Show();
-        }
-
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Registros.RegistroClientes rc = new Registros.RegistroClientes();
-            rc.Show();
-        }
-
-        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            consulta.ConsultaClientes cc = new consulta.ConsultaClientes();
-            cc.Show();
-        }
-
-        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Registros.RegistroServicios rS = new Registros.RegistroServicios();
-            rS.Show();
-        }
-
-        private void serviciosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            consulta.consultaServicios cS = new consulta.consultaServicios();
-            cS.Show();
-        }
-
-        private void clientesToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            ReporteClientes re = new ReporteClientes();
-            re.Show();
-        }
-
-        private void empleadasToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Reportes.ReporteEmpleadas report = new Reportes.ReporteEmpleadas();
-            report.Show();
-        }
-
-        private void serviciosToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            Reportes.ReporteServicios reporte = new Reportes.ReporteServicios();
-            reporte.Show();
-        }
-
         private void Login_Load(object sender, EventArgs e)
         {
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.CenterToScreen();
-        }
-
-        private void CitasBoton_Click(object sender, EventArgs e)
-        {
-            Registros.RegistroCitas rc = new Registros.RegistroCitas();
-            rc.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            consulta.ConsultaCitas cc = new consulta.ConsultaCitas();
-            cc.Show();
-        }
-
-        private void FacturarBoton_Click(object sender, EventArgs e)
-        {
-            Factura f = new Factura();
-            f.Show();
+            MaximizeBox = false;
+            MinimizeBox = false;
         }
     }
 }
