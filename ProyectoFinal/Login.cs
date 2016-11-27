@@ -60,6 +60,11 @@ namespace ProyectoFinal
         {
             MaximizeBox = false;
             MinimizeBox = false;
+            
+            //Asignar los asteriscos para la clave
+            claveTexBox.Text = "";
+            claveTexBox.PasswordChar = '*';
+            claveTexBox.MaxLength = 14;
         }
     }
 }

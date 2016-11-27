@@ -146,5 +146,32 @@ namespace ProyectoFinal
             }
             ServicioTextBox.AutoCompleteCustomSource = aColl;
         }
+
+        private void EditarBoton_Click(object sender, EventArgs e)
+        {
+            if (IdTextBox.Text != null)
+            {
+                Empleadas user = new Empleadas();
+
+                user.Nombre = NombreTextBox.Text;
+                user.Cedula = CedulaTextBox.Text;
+                user.Direccion = DireccionTextBox.Text;
+                user.Telefono = TelefonoTextBox.Text;
+                user.FechaEntrada = FechaDateTimePicker.Value;
+                user.Servicio = ServicioTextBox.Text;
+                user.SueldoFijo = Convert.ToInt32(SueldoFijoTextBox.Text);
+
+
+                if (EmpleadasBll.Editar(Convert.ToInt32(IdTextBox.Text), user))
+                {
+                    MessageBox.Show("Modificado!!");
+                }
+                LimpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Necesitas el id para modificar");
+            }
+        }
     }
 }

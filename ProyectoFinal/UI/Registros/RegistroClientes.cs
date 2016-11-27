@@ -29,20 +29,19 @@ namespace ProyectoFinal.Registros
             }
             else
             {
-                Clientes user = new Clientes();
+                    Clientes user = new Clientes();
 
-                user.Nombre = NombretextBox.Text;
-                user.Cedula = CedulaTextBox.Text;
-                user.Direccion = DireccionTextBox.Text;
-                user.Telefono = TelefonoTextBox.Text;
+                    user.Nombre = NombretextBox.Text;
+                    user.Cedula = CedulaTextBox.Text;
+                    user.Direccion = DireccionTextBox.Text;
+                    user.Telefono = TelefonoTextBox.Text;
 
 
-                if (ClientesBll.Guardar(user))
-                {
-                    MessageBox.Show("Guardado !!");
-                }
-                LimpiarCampos();
-
+                    if (ClientesBll.Guardar(user))
+                    {
+                        MessageBox.Show("Guardado !!");
+                    }
+                    LimpiarCampos();
             }
         }
 
@@ -104,6 +103,31 @@ namespace ProyectoFinal.Registros
         {
             MaximizeBox = false;
             MinimizeBox = false;
+        }
+
+        private void EditarBoton_Click(object sender, EventArgs e)
+        {
+            if(IDtextBox.Text != null)
+            {
+                Clientes user = new Clientes();
+
+                user.Nombre = NombretextBox.Text;
+                user.Cedula = CedulaTextBox.Text;
+                user.Direccion = DireccionTextBox.Text;
+                user.Telefono = TelefonoTextBox.Text;
+
+
+                if (ClientesBll.Editar(Convert.ToInt32(IDtextBox.Text), user))
+                {
+                    MessageBox.Show("Modificado!!");
+                }
+                LimpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Necesitas el id para modificar");
+            }
+            
         }
     }
 }

@@ -36,15 +36,15 @@ namespace ProyectoFinal.consulta
 
         }
 
-       /* private void FiltrarFechaBoton_Click(object sender, EventArgs e)
-        {
-            BeautyBaseDb db = new BeautyBaseDb();
 
-            if(DesdeDateTimePicker.Value.Date < HastaDateTimePicker.Value.Date)
-            {
-                lista = CitasBll.GetLista(DesdeDateTimePicker.Value,HastaDateTimePicker.Value);
-            }
-            listadoConsulta.DataSource = lista;
-        }*/
+         private void FiltrarFechaBoton_Click(object sender, EventArgs e)
+         {
+             BeautyBaseDb db = new BeautyBaseDb();
+
+             if(DesdeDateTimePicker.Value.Date < HastaDateTimePicker.Value.Date)
+             {
+                 listadoConsulta.DataSource= CitasBll.GetListaFecha(DesdeDateTimePicker.Value.Date,HastaDateTimePicker.Value.Date);
+             }
+         }
     }
 }

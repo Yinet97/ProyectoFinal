@@ -29,6 +29,28 @@ namespace BLL
             return retorno;
         }
 
+        public static bool Editar(int id, Citas em)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new BeautyBaseDb())
+                {
+                    Citas c = db.Cita.Find(id);
+
+                    c.NombreCliente = em.NombreCliente;
+                    c.FechaHora = em.FechaHora;
+                    db.SaveChanges();
+                }
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
+
         public static Citas Buscar(int id)
         {
             Citas date = new Citas();
@@ -61,7 +83,7 @@ namespace BLL
             return retorno;
         }
 
-        public static bool EliminarCitaPasada(DateTime cita)
+        public static bool EliminarCitaPasada(int cita)
         {
             bool retorno = false;
 
@@ -69,7 +91,7 @@ namespace BLL
             {
                 using (BeautyBaseDb db = new BeautyBaseDb())
                 {
-                    Citas date = (from c in db.Cita where c.FechaHora == cita select c).FirstOrDefault();
+                    Citas date = (from c in db.Cita where c.CitaId == cita select c).FirstOrDefault();
                     db.Cita.Remove(date);
                     db.SaveChanges();
                     retorno = true;
@@ -101,13 +123,22 @@ namespace BLL
             return lista;
         }
 
-     /*   public static List<Citas> GetListaFecha(DateTime fecha)
+        public static List<Citas> GetLista(string nombre)
         {
             List<Citas> lista = new List<Citas>();
             BeautyBaseDb db = new BeautyBaseDb();
 
-            lista = db.Cita.Where(u => u.FechaHora.Date > fecha.Date).ToList();
+            lista = db.Cita.Where(u => u.NombreCliente == nombre).ToList();
             return lista;
-        } */
+        }
+
+        public static List<Citas> GetListaFecha(DateTime desde, DateTime hasta)
+        {
+            List<Citas> lista = new List<Citas>();
+            BeautyBaseDb db = new BeautyBaseDb();
+
+            lista = db.Cita.Where(u => u.FechaHora >= desde.Date && u.FechaHora <= hasta).ToList();
+            return lista;
+        } 
     }
 }

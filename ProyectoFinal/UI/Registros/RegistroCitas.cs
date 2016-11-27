@@ -115,12 +115,14 @@ namespace ProyectoFinal.Registros
         public void LlenarLista()
         {
             ListaCitaDataGridView.DataSource = null;
-            ListaCitaDataGridView.DataSource = CitasBll.GetLista();
+            ListaCitaDataGridView.DataSource = CitasBll.GetLista();           
         }
         
 
         private void RegistroCitas_Load(object sender, EventArgs e)
         {
+            LlenarLista();
+
             AutoCompleteMode DataCollection = new AutoCompleteMode();
             AutoCompletarTxt(DataCollection);
 
@@ -150,26 +152,46 @@ namespace ProyectoFinal.Registros
 
         public void EliminarCitaAntigua()
         {
-            BeautyBaseDb db = new BeautyBaseDb();
-            DateTime hoy = DateTime.Now;
-
-            var pastDate = from obj in db.Cita
-                     select obj.FechaHora;
-
-            foreach(DateTime d in pastDate)
+            using (var db = new BeautyBaseDb())
             {
-                if(d.Date < hoy)
-                {
-                    CitasBll.EliminarCitaPasada(d);
-                }
-                LlenarLista();
-            }
+                DateTime hoy = DateTime.Now;
 
+                var pastDate = from obj in db.Cita where obj.FechaHora < hoy.Date 
+                               select obj.CitaId;
+
+                foreach(int d in pastDate)
+               {
+                        CitasBll.EliminarCitaPasada(d);
+                    
+               }
+            }
+            LlenarLista();
         }
 
         private void ActualizarBoton_Click(object sender, EventArgs e)
         {
             EliminarCitaAntigua();
+        }
+
+        private void EditarBoton_Click(object sender, EventArgs e)
+        {
+            if (IdCitaTextBox.Text != null)
+            {
+                Citas user = new Citas();
+
+                user.NombreCliente = ClienteTextBox.Text;
+                user.FechaHora = CitaDateTimePicker.Value;
+
+                if (CitasBll.Editar(Convert.ToInt32(IdCitaTextBox.Text), user))
+                {
+                    MessageBox.Show("Modificado!!");
+                }
+                LimpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Necesitas el id de la cita para modificar");
+            }
         }
     }
 }

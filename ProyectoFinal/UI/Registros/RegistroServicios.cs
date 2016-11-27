@@ -90,5 +90,27 @@ namespace ProyectoFinal.Registros
             TipoTextBox.Clear();
             CostoTextBox.Clear();
         }
+
+        private void EditarBoton_Click(object sender, EventArgs e)
+        {
+            if (IDtextBox.Text != null)
+            {
+                Servicios user = new Servicios();
+
+                user.Costo = Convert.ToInt32(CostoTextBox.Text);
+                user.TipoServicio = TipoTextBox.Text;
+
+
+                if (ServiciosBll.Editar(Convert.ToInt32(IDtextBox.Text), user))
+                {
+                    MessageBox.Show("Modificado!!");
+                }
+                LimpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Necesitas el id para modificar");
+            }
+        }
     }
 }

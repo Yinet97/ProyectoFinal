@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.botonRegistrar = new System.Windows.Forms.Button();
+            this.botonEntrar = new System.Windows.Forms.Button();
             this.claveTexBox = new System.Windows.Forms.TextBox();
             this.usuarioTexBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.botonRegistrar = new System.Windows.Forms.Button();
-            this.botonEntrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,44 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(478, 351);
             this.panel1.TabIndex = 1;
-            // 
-            // claveTexBox
-            // 
-            this.claveTexBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.claveTexBox.Location = new System.Drawing.Point(96, 248);
-            this.claveTexBox.Name = "claveTexBox";
-            this.claveTexBox.Size = new System.Drawing.Size(319, 27);
-            this.claveTexBox.TabIndex = 3;
-            // 
-            // usuarioTexBox
-            // 
-            this.usuarioTexBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuarioTexBox.Location = new System.Drawing.Point(96, 192);
-            this.usuarioTexBox.Name = "usuarioTexBox";
-            this.usuarioTexBox.Size = new System.Drawing.Size(319, 27);
-            this.usuarioTexBox.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(50, 222);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Clave";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(50, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario";
             // 
             // pictureBox1
             // 
@@ -137,6 +99,46 @@
             this.botonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.botonEntrar.UseVisualStyleBackColor = false;
             this.botonEntrar.Click += new System.EventHandler(this.botonEntrar_Click);
+            // 
+            // claveTexBox
+            // 
+            this.claveTexBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.claveTexBox.ForeColor = System.Drawing.Color.Teal;
+            this.claveTexBox.Location = new System.Drawing.Point(96, 248);
+            this.claveTexBox.Name = "claveTexBox";
+            this.claveTexBox.Size = new System.Drawing.Size(319, 27);
+            this.claveTexBox.TabIndex = 3;
+            // 
+            // usuarioTexBox
+            // 
+            this.usuarioTexBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarioTexBox.ForeColor = System.Drawing.Color.Teal;
+            this.usuarioTexBox.Location = new System.Drawing.Point(96, 192);
+            this.usuarioTexBox.Name = "usuarioTexBox";
+            this.usuarioTexBox.Size = new System.Drawing.Size(319, 27);
+            this.usuarioTexBox.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(50, 222);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Clave";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(50, 157);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Usuario";
             // 
             // Login
             // 

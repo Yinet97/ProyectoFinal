@@ -53,6 +53,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.EditarBoton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,9 +96,9 @@
             this.EliminarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarBoton.Image = global::ProyectoFinal.Properties.Resources.cfl1401721102536_hiresdevice_es_es;
             this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarBoton.Location = new System.Drawing.Point(597, 423);
+            this.EliminarBoton.Location = new System.Drawing.Point(615, 423);
             this.EliminarBoton.Name = "EliminarBoton";
-            this.EliminarBoton.Size = new System.Drawing.Size(197, 47);
+            this.EliminarBoton.Size = new System.Drawing.Size(140, 47);
             this.EliminarBoton.TabIndex = 31;
             this.EliminarBoton.Text = "Eliminar";
             this.EliminarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -111,9 +112,9 @@
             this.GuardarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarBoton.Image = global::ProyectoFinal.Properties.Resources.save_32;
             this.GuardarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarBoton.Location = new System.Drawing.Point(326, 423);
+            this.GuardarBoton.Location = new System.Drawing.Point(231, 423);
             this.GuardarBoton.Name = "GuardarBoton";
-            this.GuardarBoton.Size = new System.Drawing.Size(183, 47);
+            this.GuardarBoton.Size = new System.Drawing.Size(128, 47);
             this.GuardarBoton.TabIndex = 30;
             this.GuardarBoton.Text = "Guardar";
             this.GuardarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -129,7 +130,7 @@
             this.NuevoBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NuevoBoton.Location = new System.Drawing.Point(55, 423);
             this.NuevoBoton.Name = "NuevoBoton";
-            this.NuevoBoton.Size = new System.Drawing.Size(164, 47);
+            this.NuevoBoton.Size = new System.Drawing.Size(123, 47);
             this.NuevoBoton.TabIndex = 29;
             this.NuevoBoton.Text = "Nuevo";
             this.NuevoBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -318,12 +319,29 @@
             this.panel4.Size = new System.Drawing.Size(889, 51);
             this.panel4.TabIndex = 45;
             // 
+            // EditarBoton
+            // 
+            this.EditarBoton.BackColor = System.Drawing.Color.White;
+            this.EditarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditarBoton.Image = global::ProyectoFinal.Properties.Resources.save_32;
+            this.EditarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EditarBoton.Location = new System.Drawing.Point(411, 423);
+            this.EditarBoton.Name = "EditarBoton";
+            this.EditarBoton.Size = new System.Drawing.Size(126, 47);
+            this.EditarBoton.TabIndex = 46;
+            this.EditarBoton.Text = "Editar";
+            this.EditarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EditarBoton.UseVisualStyleBackColor = false;
+            this.EditarBoton.Click += new System.EventHandler(this.EditarBoton_Click);
+            // 
             // RegistroEmpleada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(229)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(850, 492);
+            this.Controls.Add(this.EditarBoton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.EliminarBoton);
             this.Controls.Add(this.GuardarBoton);
@@ -367,5 +385,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button EditarBoton;
     }
 }

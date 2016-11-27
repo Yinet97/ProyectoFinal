@@ -50,6 +50,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.EditarBoton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListaCitaDataGridView)).BeginInit();
             this.ClienteGroupBox.SuspendLayout();
@@ -241,7 +242,7 @@
             // 
             this.EliminarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliminarBoton.Location = new System.Drawing.Point(639, 386);
+            this.EliminarBoton.Location = new System.Drawing.Point(671, 386);
             this.EliminarBoton.Name = "EliminarBoton";
             this.EliminarBoton.Size = new System.Drawing.Size(117, 49);
             this.EliminarBoton.TabIndex = 2;
@@ -253,9 +254,9 @@
             // 
             this.GuardarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GuardarBoton.Location = new System.Drawing.Point(399, 386);
+            this.GuardarBoton.Location = new System.Drawing.Point(277, 386);
             this.GuardarBoton.Name = "GuardarBoton";
-            this.GuardarBoton.Size = new System.Drawing.Size(117, 49);
+            this.GuardarBoton.Size = new System.Drawing.Size(120, 49);
             this.GuardarBoton.TabIndex = 3;
             this.GuardarBoton.Text = "Guardar";
             this.GuardarBoton.UseVisualStyleBackColor = true;
@@ -285,12 +286,25 @@
             this.panel4.Size = new System.Drawing.Size(880, 54);
             this.panel4.TabIndex = 45;
             // 
+            // EditarBoton
+            // 
+            this.EditarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditarBoton.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditarBoton.Location = new System.Drawing.Point(482, 386);
+            this.EditarBoton.Name = "EditarBoton";
+            this.EditarBoton.Size = new System.Drawing.Size(120, 49);
+            this.EditarBoton.TabIndex = 46;
+            this.EditarBoton.Text = "Editar";
+            this.EditarBoton.UseVisualStyleBackColor = true;
+            this.EditarBoton.Click += new System.EventHandler(this.EditarBoton_Click);
+            // 
             // RegistroCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(229)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(880, 458);
+            this.Controls.Add(this.EditarBoton);
             this.Controls.Add(this.NuevoBoton);
             this.Controls.Add(this.GuardarBoton);
             this.Controls.Add(this.EliminarBoton);
@@ -335,5 +349,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView ListaCitaDataGridView;
         private System.Windows.Forms.Button ActualizarBoton;
+        private System.Windows.Forms.Button EditarBoton;
     }
 }
