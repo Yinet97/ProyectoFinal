@@ -32,6 +32,7 @@
             this.listadoConsulta = new System.Windows.Forms.DataGridView();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.textBoxID = new System.Windows.Forms.TextBox();
+            this.ImprimirReporteBoton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listadoConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,6 @@
             this.listadoConsulta.Name = "listadoConsulta";
             this.listadoConsulta.Size = new System.Drawing.Size(718, 186);
             this.listadoConsulta.TabIndex = 0;
-            this.listadoConsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listadoConsulta_CellContentClick);
             // 
             // BotonBuscar
             // 
@@ -65,7 +65,19 @@
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(390, 27);
             this.textBoxID.TabIndex = 2;
-            this.textBoxID.TextChanged += new System.EventHandler(this.textBoxID_TextChanged);
+            // 
+            // ImprimirReporteBoton
+            // 
+            this.ImprimirReporteBoton.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.ImprimirReporteBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImprimirReporteBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImprimirReporteBoton.Location = new System.Drawing.Point(312, 332);
+            this.ImprimirReporteBoton.Name = "ImprimirReporteBoton";
+            this.ImprimirReporteBoton.Size = new System.Drawing.Size(180, 49);
+            this.ImprimirReporteBoton.TabIndex = 3;
+            this.ImprimirReporteBoton.Text = "Imprimir Reporte";
+            this.ImprimirReporteBoton.UseVisualStyleBackColor = false;
+            this.ImprimirReporteBoton.Click += new System.EventHandler(this.ImprimirReporteBoton_Click);
             // 
             // ConsultaEmpleadas
             // 
@@ -73,6 +85,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(787, 404);
+            this.Controls.Add(this.ImprimirReporteBoton);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.listadoConsulta);
@@ -90,5 +103,6 @@
         private System.Windows.Forms.DataGridView listadoConsulta;
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Button ImprimirReporteBoton;
     }
 }

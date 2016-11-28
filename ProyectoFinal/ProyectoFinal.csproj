@@ -78,6 +78,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BeautyBaseDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeautyBaseDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +111,12 @@
     </Compile>
     <Compile Include="UI\consulta\ConsultaEmpleadas.Designer.cs">
       <DependentUpon>ConsultaEmpleadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\consulta\ConsultaFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\consulta\ConsultaFacturas.Designer.cs">
+      <DependentUpon>ConsultaFacturas.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\consulta\consultaServicios.cs">
       <SubType>Form</SubType>
@@ -163,6 +174,12 @@
     <Compile Include="UI\Registros\RegistroTiposUsuarios.Designer.cs">
       <DependentUpon>RegistroTiposUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\ReporteCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReporteCitas.Designer.cs">
+      <DependentUpon>ReporteCitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Reportes\ReporteClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +191,12 @@
     </Compile>
     <Compile Include="UI\Reportes\ReporteEmpleadas.Designer.cs">
       <DependentUpon>ReporteEmpleadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\ReporteFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReporteFacturas.Designer.cs">
+      <DependentUpon>ReporteFacturas.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Reportes\ReporteServicios.cs">
       <SubType>Form</SubType>
@@ -193,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\consulta\ConsultaEmpleadas.resx">
       <DependentUpon>ConsultaEmpleadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\consulta\ConsultaFacturas.resx">
+      <DependentUpon>ConsultaFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\consulta\consultaServicios.resx">
       <DependentUpon>consultaServicios.cs</DependentUpon>
@@ -226,9 +252,16 @@
     <EmbeddedResource Include="UI\Registros\RegistroTiposUsuarios.resx">
       <DependentUpon>RegistroTiposUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\Citas.rdlc" />
     <EmbeddedResource Include="UI\Reportes\Clientes.rdlc" />
     <EmbeddedResource Include="UI\Reportes\Empleadas.rdlc" />
-    <EmbeddedResource Include="UI\Reportes\Servicios.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\Facturas.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\ReporteCitas.resx">
+      <DependentUpon>ReporteCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ReporteFacturas.resx">
+      <DependentUpon>ReporteFacturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ReporteClientes.resx">
       <DependentUpon>ReporteClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +271,18 @@
     <EmbeddedResource Include="UI\Reportes\ReporteServicios.resx">
       <DependentUpon>ReporteServicios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\Servicios.rdlc" />
+    <None Include="BeautyBaseDbDataSet.xsc">
+      <DependentUpon>BeautyBaseDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BeautyBaseDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BeautyBaseDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BeautyBaseDbDataSet.xss">
+      <DependentUpon>BeautyBaseDbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

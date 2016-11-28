@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.ImprmirReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listadoConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,12 +152,27 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "ID o Nombre";
             // 
+            // ImprmirReporte
+            // 
+            this.ImprmirReporte.BackColor = System.Drawing.Color.LightCoral;
+            this.ImprmirReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImprmirReporte.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImprmirReporte.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ImprmirReporte.Location = new System.Drawing.Point(303, 380);
+            this.ImprmirReporte.Name = "ImprmirReporte";
+            this.ImprmirReporte.Size = new System.Drawing.Size(152, 49);
+            this.ImprmirReporte.TabIndex = 16;
+            this.ImprmirReporte.Text = "Imprimir Reporte";
+            this.ImprmirReporte.UseVisualStyleBackColor = false;
+            this.ImprmirReporte.Click += new System.EventHandler(this.ImprmirReporte_Click);
+            // 
             // ConsultaCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(772, 388);
+            this.ClientSize = new System.Drawing.Size(772, 441);
+            this.Controls.Add(this.ImprmirReporte);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -188,5 +204,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button ImprmirReporte;
     }
 }

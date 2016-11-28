@@ -17,7 +17,6 @@ namespace BLL.Tests
             Servicios c = new Servicios();
             c.TipoServicio = "pedicura";
             c.Costo = 250;
-            c.PorcientoAdicional = 2;
             Assert.IsTrue(ServiciosBll.Guardar(c) != false);
         }
 

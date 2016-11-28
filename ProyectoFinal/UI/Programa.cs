@@ -111,6 +111,11 @@ namespace ProyectoFinal
             consulta.ConsultaCitas cc = new consulta.ConsultaCitas();
             cc.Show();
         }
-        
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.consulta.ConsultaFacturas cf = new UI.consulta.ConsultaFacturas();
+            cf.Show();
+        }
     }
 }

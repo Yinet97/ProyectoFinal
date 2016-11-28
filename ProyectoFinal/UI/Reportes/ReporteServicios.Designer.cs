@@ -30,53 +30,49 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.beautyBaseDbDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteServicios));
             this.ServiciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.beautyBaseDbDataSet2BindingSource)).BeginInit();
+            this.beautyBaseDbDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ServiciosReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beautyBaseDbDataSet2BindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // beautyBaseDbDataSet2
-            // 
-            // 
-            // beautyBaseDbDataSet2BindingSource
-            // 
-            this.beautyBaseDbDataSet2BindingSource.Position = 0;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "Servicios";
-            reportDataSource1.Value = this.ServiciosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoFinal.Reportes.Servicios.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(757, 423);
-            this.reportViewer1.TabIndex = 0;
             // 
             // ServiciosBindingSource
             // 
             this.ServiciosBindingSource.DataMember = "Servicios";
+            // 
+            // ServiciosReportViewer
+            // 
+            reportDataSource1.Name = "Servicios";
+            reportDataSource1.Value = this.ServiciosBindingSource;
+            this.ServiciosReportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.ServiciosReportViewer.LocalReport.ReportEmbeddedResource = "ProyectoFinal.Reportes.Servicios.rdlc";
+            this.ServiciosReportViewer.Location = new System.Drawing.Point(0, 0);
+            this.ServiciosReportViewer.Name = "ServiciosReportViewer";
+            this.ServiciosReportViewer.Size = new System.Drawing.Size(757, 423);
+            this.ServiciosReportViewer.TabIndex = 0;
+            this.ServiciosReportViewer.Load += new System.EventHandler(this.ServiciosReportViewer_Load);
             // 
             // ReporteServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 421);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.ServiciosReportViewer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReporteServicios";
             this.Text = "ReporteServicios";
             this.Load += new System.EventHandler(this.ReporteServicios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.beautyBaseDbDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beautyBaseDbDataSet2BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.BindingSource beautyBaseDbDataSet2BindingSource;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer ServiciosReportViewer;
         private System.Windows.Forms.BindingSource ServiciosBindingSource;
     }
 }

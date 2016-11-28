@@ -34,5 +34,11 @@ namespace ProyectoFinal.consulta
             }
             listadoConsulta.DataSource = lista;
         }
+
+        private void ImprimirReporteBoton_Click(object sender, EventArgs e)
+        {
+            ReporteClientes rc = new ReporteClientes();
+            rc.Show();
+        }
     }
 }

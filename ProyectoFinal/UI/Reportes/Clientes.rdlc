@@ -6,12 +6,12 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.3in</Width>
+              <Width>1.08333in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.30208in</Height>
+              <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -22,7 +22,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>telefono</Value>
+                              <Value>Cliente Id</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -52,18 +52,18 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.30208in</Height>
+              <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="telefono">
+                    <Textbox Name="ClienteId">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!telefono.Value</Value>
+                              <Value>=Sum(Fields!ClienteId.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -73,7 +73,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>telefono</rd:DefaultName>
+                      <rd:DefaultName>ClienteId</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -100,16 +100,16 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>1.3in</Size>
+                <Size>1.08333in</Size>
                 <CellContents>
-                  <Textbox Name="Textbox9">
+                  <Textbox Name="Textbox11">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>cliente ID</Value>
+                            <Value>Cliente Id</Value>
                             <Style>
                               <FontFamily>Tahoma</FontFamily>
                               <FontSize>11pt</FontSize>
@@ -121,7 +121,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox9</rd:DefaultName>
+                    <rd:DefaultName>Textbox11</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>#7292cc</Color>
@@ -139,16 +139,16 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>1.3in</Size>
+                    <Size>1.08333in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox7">
+                      <Textbox Name="Textbox9">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>nombre</Value>
+                                <Value>Nombre</Value>
                                 <Style>
                                   <FontFamily>Tahoma</FontFamily>
                                   <FontSize>11pt</FontSize>
@@ -160,7 +160,7 @@
                             <Style />
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>Textbox7</rd:DefaultName>
+                        <rd:DefaultName>Textbox9</rd:DefaultName>
                         <Style>
                           <Border>
                             <Color>#7292cc</Color>
@@ -178,16 +178,16 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>1.3in</Size>
+                        <Size>1.08333in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox5">
+                          <Textbox Name="Textbox7">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>cedula</Value>
+                                    <Value>Cedula</Value>
                                     <Style>
                                       <FontFamily>Tahoma</FontFamily>
                                       <FontSize>11pt</FontSize>
@@ -199,7 +199,7 @@
                                 <Style />
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox5</rd:DefaultName>
+                            <rd:DefaultName>Textbox7</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>#7292cc</Color>
@@ -217,16 +217,16 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>1.3in</Size>
+                            <Size>1.08333in</Size>
                             <CellContents>
-                              <Textbox Name="Textbox3">
+                              <Textbox Name="Textbox5">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>direccion</Value>
+                                        <Value>Direccion</Value>
                                         <Style>
                                           <FontFamily>Tahoma</FontFamily>
                                           <FontSize>11pt</FontSize>
@@ -238,7 +238,7 @@
                                     <Style />
                                   </Paragraph>
                                 </Paragraphs>
-                                <rd:DefaultName>Textbox3</rd:DefaultName>
+                                <rd:DefaultName>Textbox5</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Color>#7292cc</Color>
@@ -254,7 +254,48 @@
                             </CellContents>
                           </TablixHeader>
                           <TablixMembers>
-                            <TablixMember />
+                            <TablixMember>
+                              <TablixHeader>
+                                <Size>1.08333in</Size>
+                                <CellContents>
+                                  <Textbox Name="Textbox3">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>Telefono</Value>
+                                            <Style>
+                                              <FontFamily>Tahoma</FontFamily>
+                                              <FontSize>11pt</FontSize>
+                                              <FontWeight>Bold</FontWeight>
+                                              <Color>White</Color>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>Textbox3</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>#7292cc</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <BackgroundColor>#4c68a2</BackgroundColor>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember />
+                              </TablixMembers>
+                            </TablixMember>
                           </TablixMembers>
                         </TablixMember>
                       </TablixMembers>
@@ -262,30 +303,29 @@
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
-              <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
-              <Group Name="clienteID">
+              <Group Name="ClienteId">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!clienteID.Value</GroupExpression>
+                  <GroupExpression>=Fields!ClienteId.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!clienteID.Value</Value>
+                  <Value>=Fields!ClienteId.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>1.3in</Size>
+                <Size>1.08333in</Size>
                 <CellContents>
-                  <Textbox Name="clienteID">
+                  <Textbox Name="ClienteId1">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!clienteID.Value</Value>
+                            <Value>=Fields!ClienteId.Value</Value>
                             <Style>
                               <FontFamily>Tahoma</FontFamily>
                               <FontWeight>Bold</FontWeight>
@@ -296,7 +336,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>clienteID</rd:DefaultName>
+                    <rd:DefaultName>ClienteId1</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>#c6daf8</Color>
@@ -313,27 +353,27 @@
               </TablixHeader>
               <TablixMembers>
                 <TablixMember>
-                  <Group Name="nombre">
+                  <Group Name="Nombre">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!nombre.Value</GroupExpression>
+                      <GroupExpression>=Fields!Nombre.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!nombre.Value</Value>
+                      <Value>=Fields!Nombre.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>1.3in</Size>
+                    <Size>1.08333in</Size>
                     <CellContents>
-                      <Textbox Name="nombre">
+                      <Textbox Name="Nombre">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>=Fields!nombre.Value</Value>
+                                <Value>=Fields!Nombre.Value</Value>
                                 <Style>
                                   <FontFamily>Tahoma</FontFamily>
                                   <FontWeight>Bold</FontWeight>
@@ -344,7 +384,7 @@
                             <Style />
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>nombre</rd:DefaultName>
+                        <rd:DefaultName>Nombre</rd:DefaultName>
                         <Style>
                           <Border>
                             <Color>#e6eefc</Color>
@@ -361,27 +401,27 @@
                   </TablixHeader>
                   <TablixMembers>
                     <TablixMember>
-                      <Group Name="cedula">
+                      <Group Name="Cedula">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!cedula.Value</GroupExpression>
+                          <GroupExpression>=Fields!Cedula.Value</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!cedula.Value</Value>
+                          <Value>=Fields!Cedula.Value</Value>
                         </SortExpression>
                       </SortExpressions>
                       <TablixHeader>
-                        <Size>1.3in</Size>
+                        <Size>1.08333in</Size>
                         <CellContents>
-                          <Textbox Name="cedula">
+                          <Textbox Name="Cedula">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>=Fields!cedula.Value</Value>
+                                    <Value>=Fields!Cedula.Value</Value>
                                     <Style>
                                       <FontFamily>Tahoma</FontFamily>
                                       <FontWeight>Bold</FontWeight>
@@ -392,7 +432,7 @@
                                 <Style />
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>cedula</rd:DefaultName>
+                            <rd:DefaultName>Cedula</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>White</Color>
@@ -409,27 +449,27 @@
                       </TablixHeader>
                       <TablixMembers>
                         <TablixMember>
-                          <Group Name="direccion">
+                          <Group Name="Direccion">
                             <GroupExpressions>
-                              <GroupExpression>=Fields!direccion.Value</GroupExpression>
+                              <GroupExpression>=Fields!Direccion.Value</GroupExpression>
                             </GroupExpressions>
                           </Group>
                           <SortExpressions>
                             <SortExpression>
-                              <Value>=Fields!direccion.Value</Value>
+                              <Value>=Fields!Direccion.Value</Value>
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
-                            <Size>1.3in</Size>
+                            <Size>1.08333in</Size>
                             <CellContents>
-                              <Textbox Name="direccion">
+                              <Textbox Name="Direccion">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>=Fields!direccion.Value</Value>
+                                        <Value>=Fields!Direccion.Value</Value>
                                         <Style>
                                           <FontFamily>Tahoma</FontFamily>
                                           <FontWeight>Bold</FontWeight>
@@ -440,7 +480,7 @@
                                     <Style />
                                   </Paragraph>
                                 </Paragraphs>
-                                <rd:DefaultName>direccion</rd:DefaultName>
+                                <rd:DefaultName>Direccion</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Color>White</Color>
@@ -457,37 +497,85 @@
                           </TablixHeader>
                           <TablixMembers>
                             <TablixMember>
-                              <Group Name="Details" />
+                              <Group Name="Telefono">
+                                <GroupExpressions>
+                                  <GroupExpression>=Fields!Telefono.Value</GroupExpression>
+                                </GroupExpressions>
+                              </Group>
+                              <SortExpressions>
+                                <SortExpression>
+                                  <Value>=Fields!Telefono.Value</Value>
+                                </SortExpression>
+                              </SortExpressions>
+                              <TablixHeader>
+                                <Size>1.08333in</Size>
+                                <CellContents>
+                                  <Textbox Name="Telefono">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>=Fields!Telefono.Value</Value>
+                                            <Style>
+                                              <FontFamily>Tahoma</FontFamily>
+                                              <FontWeight>Bold</FontWeight>
+                                              <Color>#4c68a2</Color>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>Telefono</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>White</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <BackgroundColor>#e6eefc</BackgroundColor>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember />
+                              </TablixMembers>
                               <Visibility>
                                 <Hidden>true</Hidden>
-                                <ToggleItem>direccion</ToggleItem>
+                                <ToggleItem>Direccion</ToggleItem>
                               </Visibility>
                             </TablixMember>
                           </TablixMembers>
                           <Visibility>
                             <Hidden>true</Hidden>
-                            <ToggleItem>cedula</ToggleItem>
+                            <ToggleItem>Cedula</ToggleItem>
                           </Visibility>
                         </TablixMember>
                       </TablixMembers>
                       <Visibility>
                         <Hidden>true</Hidden>
-                        <ToggleItem>nombre</ToggleItem>
+                        <ToggleItem>Nombre</ToggleItem>
                       </Visibility>
                     </TablixMember>
                   </TablixMembers>
                   <Visibility>
                     <Hidden>true</Hidden>
-                    <ToggleItem>clienteID</ToggleItem>
+                    <ToggleItem>ClienteId1</ToggleItem>
                   </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
-        <Top>0.5625in</Top>
-        <Height>0.60417in</Height>
+        <DataSetName>ClienteDataSet</DataSetName>
+        <Top>0.34375in</Top>
+        <Height>0.5in</Height>
         <Width>6.5in</Width>
         <Style>
           <Border>
@@ -509,45 +597,45 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="BeautyBaseDbDataSet1">
+    <DataSource Name="BeautyBaseDbDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>8d7c51ed-cacd-41e1-85d8-7234b640e021</rd:DataSourceID>
+      <rd:DataSourceID>c5f47098-9c0a-4766-8a15-28d25665a1de</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="ClienteDataSet">
       <Query>
-        <DataSourceName>BeautyBaseDbDataSet1</DataSourceName>
+        <DataSourceName>BeautyBaseDbDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="clienteID">
-          <DataField>clienteID</DataField>
+        <Field Name="ClienteId">
+          <DataField>ClienteId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="nombre">
-          <DataField>nombre</DataField>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cedula">
-          <DataField>cedula</DataField>
+        <Field Name="Cedula">
+          <DataField>Cedula</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="direccion">
-          <DataField>direccion</DataField>
+        <Field Name="Direccion">
+          <DataField>Direccion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="telefono">
-          <DataField>telefono</DataField>
+        <Field Name="Telefono">
+          <DataField>Telefono</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BeautyBaseDbDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Yinet Jaquez\Desktop\ProyectoFinal\ProyectoFinal\BeautyBaseDbDataSet1.xsd</rd:SchemaPath>
+        <rd:DataSetName>BeautyBaseDbDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Yinet Jaquez\Desktop\ProyectoFinal\ProyectoFinal\BeautyBaseDbDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Clientes</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -556,5 +644,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>284c42fd-561a-45eb-b391-2a820053af93</rd:ReportID>
+  <rd:ReportID>9c4a3f2b-14be-41c0-900d-4d6dce738326</rd:ReportID>
 </Report>

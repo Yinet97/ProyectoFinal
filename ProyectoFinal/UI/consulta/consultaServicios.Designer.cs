@@ -32,6 +32,7 @@
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.listadoConsulta = new System.Windows.Forms.DataGridView();
+            this.ImprimirReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listadoConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,16 +64,29 @@
             this.listadoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listadoConsulta.Location = new System.Drawing.Point(43, 152);
             this.listadoConsulta.Name = "listadoConsulta";
-            this.listadoConsulta.Size = new System.Drawing.Size(516, 179);
+            this.listadoConsulta.Size = new System.Drawing.Size(549, 179);
             this.listadoConsulta.TabIndex = 6;
-            this.listadoConsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listadoConsulta_CellContentClick);
+            // 
+            // ImprimirReporte
+            // 
+            this.ImprimirReporte.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.ImprimirReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImprimirReporte.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImprimirReporte.Location = new System.Drawing.Point(244, 356);
+            this.ImprimirReporte.Name = "ImprimirReporte";
+            this.ImprimirReporte.Size = new System.Drawing.Size(152, 49);
+            this.ImprimirReporte.TabIndex = 9;
+            this.ImprimirReporte.Text = "ImprimirReporte";
+            this.ImprimirReporte.UseVisualStyleBackColor = false;
+            this.ImprimirReporte.Click += new System.EventHandler(this.ImprimirReporte_Click);
             // 
             // consultaServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(608, 374);
+            this.ClientSize = new System.Drawing.Size(653, 417);
+            this.Controls.Add(this.ImprimirReporte);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.listadoConsulta);
@@ -90,5 +104,6 @@
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.DataGridView listadoConsulta;
+        private System.Windows.Forms.Button ImprimirReporte;
     }
 }

@@ -32,6 +32,7 @@
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.listadoConsulta = new System.Windows.Forms.DataGridView();
+            this.ImprimirReporteBoton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listadoConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,12 +69,27 @@
             this.listadoConsulta.Size = new System.Drawing.Size(718, 186);
             this.listadoConsulta.TabIndex = 3;
             // 
+            // ImprimirReporteBoton
+            // 
+            this.ImprimirReporteBoton.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.ImprimirReporteBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImprimirReporteBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImprimirReporteBoton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ImprimirReporteBoton.Location = new System.Drawing.Point(306, 377);
+            this.ImprimirReporteBoton.Name = "ImprimirReporteBoton";
+            this.ImprimirReporteBoton.Size = new System.Drawing.Size(152, 49);
+            this.ImprimirReporteBoton.TabIndex = 6;
+            this.ImprimirReporteBoton.Text = "Imprimir Reporte";
+            this.ImprimirReporteBoton.UseVisualStyleBackColor = false;
+            this.ImprimirReporteBoton.Click += new System.EventHandler(this.ImprimirReporteBoton_Click);
+            // 
             // ConsultaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(758, 438);
+            this.Controls.Add(this.ImprimirReporteBoton);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.listadoConsulta);
@@ -91,5 +107,6 @@
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.DataGridView listadoConsulta;
+        private System.Windows.Forms.Button ImprimirReporteBoton;
     }
 }

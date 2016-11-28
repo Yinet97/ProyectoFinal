@@ -49,6 +49,7 @@
             this.FacturarBoton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +110,8 @@
             this.empleadasToolStripMenuItem,
             this.clientesToolStripMenuItem1,
             this.serviciosToolStripMenuItem1,
-            this.citasToolStripMenuItem});
+            this.citasToolStripMenuItem,
+            this.facturasToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(80, 22);
             this.consultaToolStripMenuItem.Text = "Consultar";
@@ -118,7 +120,7 @@
             // 
             this.usuariosToolStripMenuItem.Image = global::ProyectoFinal.Properties.Resources.glasses;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -126,7 +128,7 @@
             // 
             this.empleadasToolStripMenuItem.Image = global::ProyectoFinal.Properties.Resources.hairdresser;
             this.empleadasToolStripMenuItem.Name = "empleadasToolStripMenuItem";
-            this.empleadasToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.empleadasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.empleadasToolStripMenuItem.Text = "Empleadas";
             this.empleadasToolStripMenuItem.Click += new System.EventHandler(this.empleadasToolStripMenuItem_Click);
             // 
@@ -134,7 +136,7 @@
             // 
             this.clientesToolStripMenuItem1.Image = global::ProyectoFinal.Properties.Resources.women_hairstyling__1_;
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
@@ -142,7 +144,7 @@
             // 
             this.serviciosToolStripMenuItem1.Image = global::ProyectoFinal.Properties.Resources.hairdryer;
             this.serviciosToolStripMenuItem1.Name = "serviciosToolStripMenuItem1";
-            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.serviciosToolStripMenuItem1.Text = "Servicios";
             this.serviciosToolStripMenuItem1.Click += new System.EventHandler(this.serviciosToolStripMenuItem1_Click);
             // 
@@ -150,7 +152,7 @@
             // 
             this.citasToolStripMenuItem.Image = global::ProyectoFinal.Properties.Resources.verification_of_delivery_list_clipboard_symbol;
             this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
-            this.citasToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.citasToolStripMenuItem.Text = "Citas";
             this.citasToolStripMenuItem.Click += new System.EventHandler(this.citasToolStripMenuItem_Click);
             // 
@@ -252,6 +254,13 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Facturar";
             // 
+            // facturasToolStripMenuItem
+            // 
+            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturasToolStripMenuItem.Text = "Facturas";
+            this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
+            // 
             // Programa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,5 +307,6 @@
         private System.Windows.Forms.ToolStripMenuItem citasToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem;
     }
 }

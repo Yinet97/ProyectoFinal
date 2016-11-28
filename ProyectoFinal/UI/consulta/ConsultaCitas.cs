@@ -46,5 +46,10 @@ namespace ProyectoFinal.consulta
                  listadoConsulta.DataSource= CitasBll.GetListaFecha(DesdeDateTimePicker.Value.Date,HastaDateTimePicker.Value.Date);
              }
          }
+        private void ImprmirReporte_Click(object sender, EventArgs e)
+        {
+            UI.Reportes.ReporteCitas rc = new UI.Reportes.ReporteCitas();
+            rc.Show();
+        }
     }
 }

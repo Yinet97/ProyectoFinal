@@ -35,14 +35,10 @@ namespace ProyectoFinal.consulta
             listadoConsulta.DataSource = lista;
         }
 
-        private void textBoxID_TextChanged(object sender, EventArgs e)
+        private void ImprimirReporteBoton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void listadoConsulta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            Reportes.ReporteEmpleadas re = new Reportes.ReporteEmpleadas();
+            re.Show();
         }
     }
 }
