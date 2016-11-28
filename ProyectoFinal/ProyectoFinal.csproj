@@ -297,6 +297,9 @@
       <DependentUpon>BeautyBaseDb.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\shopping-bag-with-dollars-money-sign.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\2880x1800-pastel-orange-pastel-pink-pastel-purple-three-color-background.jpg" />
     <None Include="Resources\verification-of-delivery-list-clipboard-symbol.png" />
     <None Include="Resources\flower %281%29.png" />
     <None Include="Resources\login %281%29.png" />

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaClientes));
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.listadoConsulta = new System.Windows.Forms.DataGridView();
@@ -37,18 +38,18 @@
             // textBoxID
             // 
             this.textBoxID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(103, 96);
+            this.textBoxID.Location = new System.Drawing.Point(112, 71);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(361, 27);
             this.textBoxID.TabIndex = 5;
             // 
             // BotonBuscar
             // 
-            this.BotonBuscar.BackColor = System.Drawing.Color.Chocolate;
+            this.BotonBuscar.BackColor = System.Drawing.Color.PaleVioletRed;
             this.BotonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBuscar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BotonBuscar.Location = new System.Drawing.Point(502, 84);
+            this.BotonBuscar.Location = new System.Drawing.Point(511, 59);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(152, 49);
             this.BotonBuscar.TabIndex = 4;
@@ -71,11 +72,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(758, 438);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.listadoConsulta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConsultaClientes";
             this.Text = "Consulta Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.listadoConsulta)).EndInit();

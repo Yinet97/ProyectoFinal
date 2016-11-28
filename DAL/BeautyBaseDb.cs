@@ -21,6 +21,7 @@ namespace DAL
         public virtual DbSet<Servicios> Servicio { get; set; }
         public virtual DbSet<Citas> Cita { get; set; }
         public virtual DbSet<Facturas> Factura { get; set; }
+        public virtual DbSet<FacturasServicios> FacturaServicios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

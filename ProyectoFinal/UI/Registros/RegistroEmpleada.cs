@@ -113,7 +113,7 @@ namespace ProyectoFinal
             }
             else
             {
-                MessageBox.Show("Este Cliente no Existe");
+                MessageBox.Show("Este Empleado no Existe");
             }
 
         }

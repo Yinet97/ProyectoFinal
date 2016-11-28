@@ -93,7 +93,7 @@ namespace ProyectoFinal
             }
             else
             {
-                MessageBox.Show("Este Cliente no Existe");
+                MessageBox.Show("Este Usuario no Existe");
             }
         }
 
@@ -116,6 +116,27 @@ namespace ProyectoFinal
             MaximizeBox = false;
             MinimizeBox = false;
         }
-        
+
+        private void EditarBoton_Click(object sender, EventArgs e)
+        {
+            if (IdTextBox.Text != null)
+            {
+                Usuarios user = new Usuarios();
+
+                user.Clave = ClaveTextBox.Text;
+                user.Nombre = NombreTextBox.Text;
+                user.Tipo = TiposComboBox.SelectedValue.ToString();
+
+                if (UsuariosBll.Editar(Convert.ToInt32(IdTextBox.Text), user))
+                {
+                    MessageBox.Show("Modificado!!");
+                }
+                LimpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Necesitas el id de la cita para modificar");
+            }
+        }
     }
 }

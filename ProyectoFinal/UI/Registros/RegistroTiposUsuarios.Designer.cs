@@ -44,6 +44,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.EditarBoton = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TiposComboBox
@@ -145,14 +147,14 @@
             // 
             // Boton_Eliminar
             // 
-            this.Boton_Eliminar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Boton_Eliminar.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.Boton_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Boton_Eliminar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Boton_Eliminar.Image = global::ProyectoFinal.Properties.Resources.cfl1401721102536_hiresdevice_es_es;
             this.Boton_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Boton_Eliminar.Location = new System.Drawing.Point(494, 319);
+            this.Boton_Eliminar.Location = new System.Drawing.Point(529, 165);
             this.Boton_Eliminar.Name = "Boton_Eliminar";
-            this.Boton_Eliminar.Size = new System.Drawing.Size(155, 62);
+            this.Boton_Eliminar.Size = new System.Drawing.Size(131, 52);
             this.Boton_Eliminar.TabIndex = 10;
             this.Boton_Eliminar.Text = "Eliminar";
             this.Boton_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -160,14 +162,14 @@
             // 
             // Boton_Guardar
             // 
-            this.Boton_Guardar.BackColor = System.Drawing.Color.LavenderBlush;
+            this.Boton_Guardar.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.Boton_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Boton_Guardar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Boton_Guardar.Image = global::ProyectoFinal.Properties.Resources.save_32;
             this.Boton_Guardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Boton_Guardar.Location = new System.Drawing.Point(283, 319);
+            this.Boton_Guardar.Location = new System.Drawing.Point(186, 165);
             this.Boton_Guardar.Name = "Boton_Guardar";
-            this.Boton_Guardar.Size = new System.Drawing.Size(146, 62);
+            this.Boton_Guardar.Size = new System.Drawing.Size(139, 52);
             this.Boton_Guardar.TabIndex = 9;
             this.Boton_Guardar.Text = "Guardar";
             this.Boton_Guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -176,14 +178,14 @@
             // 
             // Boton_Nuevo
             // 
-            this.Boton_Nuevo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Boton_Nuevo.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.Boton_Nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Boton_Nuevo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Boton_Nuevo.Image = global::ProyectoFinal.Properties.Resources.anadir_mas_icono_6734_48;
             this.Boton_Nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Boton_Nuevo.Location = new System.Drawing.Point(77, 319);
+            this.Boton_Nuevo.Location = new System.Drawing.Point(23, 165);
             this.Boton_Nuevo.Name = "Boton_Nuevo";
-            this.Boton_Nuevo.Size = new System.Drawing.Size(140, 62);
+            this.Boton_Nuevo.Size = new System.Drawing.Size(124, 52);
             this.Boton_Nuevo.TabIndex = 8;
             this.Boton_Nuevo.Text = "Nuevo";
             this.Boton_Nuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,10 +211,30 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkMagenta;
+            this.panel2.Controls.Add(this.EditarBoton);
+            this.panel2.Controls.Add(this.Boton_Eliminar);
+            this.panel2.Controls.Add(this.Boton_Nuevo);
+            this.panel2.Controls.Add(this.Boton_Guardar);
             this.panel2.Location = new System.Drawing.Point(0, 164);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(690, 228);
             this.panel2.TabIndex = 50;
+            // 
+            // EditarBoton
+            // 
+            this.EditarBoton.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.EditarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditarBoton.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditarBoton.Image = global::ProyectoFinal.Properties.Resources.save_32;
+            this.EditarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EditarBoton.Location = new System.Drawing.Point(359, 165);
+            this.EditarBoton.Name = "EditarBoton";
+            this.EditarBoton.Size = new System.Drawing.Size(135, 52);
+            this.EditarBoton.TabIndex = 51;
+            this.EditarBoton.Text = "Editar";
+            this.EditarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EditarBoton.UseVisualStyleBackColor = false;
+            this.EditarBoton.Click += new System.EventHandler(this.EditarBoton_Click);
             // 
             // RegistroTiposUsuarios
             // 
@@ -222,11 +244,8 @@
             this.ClientSize = new System.Drawing.Size(688, 393);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TiposComboBox);
-            this.Controls.Add(this.Boton_Eliminar);
             this.Controls.Add(this.Boton_Buscar);
-            this.Controls.Add(this.Boton_Guardar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Boton_Nuevo);
             this.Controls.Add(this.ClaveTextBox);
             this.Controls.Add(this.NombreTextBox);
             this.Controls.Add(this.IdTextBox);
@@ -239,6 +258,7 @@
             this.Name = "RegistroTiposUsuarios";
             this.Text = "RegistroTiposUsuarios";
             this.Load += new System.EventHandler(this.RegistroTiposUsuarios_Load);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +281,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button EditarBoton;
     }
 }

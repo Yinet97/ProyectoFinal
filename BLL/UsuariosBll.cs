@@ -27,6 +27,30 @@ namespace BLL
             return retorno;
         }
 
+        public static bool Editar(int id, Usuarios user)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new BeautyBaseDb())
+                {
+                    Usuarios c = db.Usuario.Find(id);
+
+                    c.Nombre = user.Nombre;
+                    c.Tipo = user.Tipo;
+                    c.Clave = user.Clave;
+
+                    db.SaveChanges();
+                }
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
+
         public static bool Eliminar(int id)
         {
             bool retorno = false;

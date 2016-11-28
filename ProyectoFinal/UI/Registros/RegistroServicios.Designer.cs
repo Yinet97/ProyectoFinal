@@ -134,7 +134,7 @@
             // 
             // EliminarBoton
             // 
-            this.EliminarBoton.BackColor = System.Drawing.Color.White;
+            this.EliminarBoton.BackColor = System.Drawing.Color.Khaki;
             this.EliminarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarBoton.Image = global::ProyectoFinal.Properties.Resources.cfl1401721102536_hiresdevice_es_es;
@@ -150,7 +150,7 @@
             // 
             // GuardarBoton
             // 
-            this.GuardarBoton.BackColor = System.Drawing.Color.White;
+            this.GuardarBoton.BackColor = System.Drawing.Color.Khaki;
             this.GuardarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarBoton.Image = global::ProyectoFinal.Properties.Resources.save_32;
@@ -166,7 +166,7 @@
             // 
             // NuevoBoton
             // 
-            this.NuevoBoton.BackColor = System.Drawing.Color.White;
+            this.NuevoBoton.BackColor = System.Drawing.Color.Khaki;
             this.NuevoBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NuevoBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoBoton.Image = global::ProyectoFinal.Properties.Resources.anadir_mas_icono_6734_48;
@@ -206,7 +206,7 @@
             // 
             // EditarBoton
             // 
-            this.EditarBoton.BackColor = System.Drawing.Color.White;
+            this.EditarBoton.BackColor = System.Drawing.Color.Khaki;
             this.EditarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditarBoton.Image = global::ProyectoFinal.Properties.Resources.save_32;

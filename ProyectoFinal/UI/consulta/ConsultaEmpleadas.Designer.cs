@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaEmpleadas));
             this.listadoConsulta = new System.Windows.Forms.DataGridView();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.textBoxID = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@
             // 
             // BotonBuscar
             // 
-            this.BotonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(229)))), ((int)(((byte)(245)))));
+            this.BotonBuscar.BackColor = System.Drawing.Color.PaleVioletRed;
             this.BotonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBuscar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonBuscar.Location = new System.Drawing.Point(519, 44);
@@ -70,11 +71,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(787, 404);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.listadoConsulta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConsultaEmpleadas";
             this.Text = "ConsultaEmpleadas";
             ((System.ComponentModel.ISupportInitialize)(this.listadoConsulta)).EndInit();

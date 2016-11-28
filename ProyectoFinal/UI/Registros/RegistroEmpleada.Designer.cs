@@ -91,14 +91,14 @@
             // 
             // EliminarBoton
             // 
-            this.EliminarBoton.BackColor = System.Drawing.Color.White;
+            this.EliminarBoton.BackColor = System.Drawing.Color.Khaki;
             this.EliminarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliminarBoton.Image = global::ProyectoFinal.Properties.Resources.cfl1401721102536_hiresdevice_es_es;
             this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarBoton.Location = new System.Drawing.Point(615, 423);
+            this.EliminarBoton.Location = new System.Drawing.Point(627, 423);
             this.EliminarBoton.Name = "EliminarBoton";
-            this.EliminarBoton.Size = new System.Drawing.Size(140, 47);
+            this.EliminarBoton.Size = new System.Drawing.Size(152, 47);
             this.EliminarBoton.TabIndex = 31;
             this.EliminarBoton.Text = "Eliminar";
             this.EliminarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -107,14 +107,14 @@
             // 
             // GuardarBoton
             // 
-            this.GuardarBoton.BackColor = System.Drawing.Color.White;
+            this.GuardarBoton.BackColor = System.Drawing.Color.Khaki;
             this.GuardarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarBoton.Image = global::ProyectoFinal.Properties.Resources.save_32;
             this.GuardarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarBoton.Location = new System.Drawing.Point(231, 423);
+            this.GuardarBoton.Location = new System.Drawing.Point(256, 423);
             this.GuardarBoton.Name = "GuardarBoton";
-            this.GuardarBoton.Size = new System.Drawing.Size(128, 47);
+            this.GuardarBoton.Size = new System.Drawing.Size(127, 47);
             this.GuardarBoton.TabIndex = 30;
             this.GuardarBoton.Text = "Guardar";
             this.GuardarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -123,7 +123,7 @@
             // 
             // NuevoBoton
             // 
-            this.NuevoBoton.BackColor = System.Drawing.Color.White;
+            this.NuevoBoton.BackColor = System.Drawing.Color.Khaki;
             this.NuevoBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NuevoBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoBoton.Image = global::ProyectoFinal.Properties.Resources.anadir_mas_icono_6734_48;
@@ -321,14 +321,14 @@
             // 
             // EditarBoton
             // 
-            this.EditarBoton.BackColor = System.Drawing.Color.White;
+            this.EditarBoton.BackColor = System.Drawing.Color.Khaki;
             this.EditarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditarBoton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditarBoton.Image = global::ProyectoFinal.Properties.Resources.save_32;
             this.EditarBoton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EditarBoton.Location = new System.Drawing.Point(411, 423);
+            this.EditarBoton.Location = new System.Drawing.Point(448, 423);
             this.EditarBoton.Name = "EditarBoton";
-            this.EditarBoton.Size = new System.Drawing.Size(126, 47);
+            this.EditarBoton.Size = new System.Drawing.Size(127, 47);
             this.EditarBoton.TabIndex = 46;
             this.EditarBoton.Text = "Editar";
             this.EditarBoton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

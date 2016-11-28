@@ -75,7 +75,7 @@ namespace ProyectoFinal.Registros
             }
             else
             {
-                MessageBox.Show("Este Cliente no Existe");
+                MessageBox.Show("Este Servicio no Existe");
             }
         }
 
