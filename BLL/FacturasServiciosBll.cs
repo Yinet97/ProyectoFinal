@@ -9,5 +9,25 @@ namespace BLL
 {
     public class FacturasServiciosBll
     {
+        public static bool Guardar(FacturasServicios lista)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new BeautyBaseDb())
+                {
+                    db.FacturaServicios.Add(lista);
+                    db.SaveChanges();
+                }
+                retorno = true;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return retorno;
+        }
     }
 }

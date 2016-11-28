@@ -14,10 +14,12 @@ namespace ProyectoFinal
 {
     public partial class Factura : Form
     {
+        Facturas f;
         public Factura()
         {
             InitializeComponent();
             LlenarComboBox();
+            f = new Facturas();
         }
 
         private void GuardarBoton_Click(object sender, EventArgs e)
@@ -29,18 +31,20 @@ namespace ProyectoFinal
             }
             else
             {
-                Facturas f = new Facturas();
+                int id;
+                int.TryParse(IdTextBox.Text, out id);
                 f.Fecha = DateTime.Now;
                 f.Comentario = ComentarioRichTextBox.Text;
                 f.Descuento = Convert.ToInt32(DescuentoTextBox.Text);
-                f.DescuentoPorciento = Convert.ToDecimal(PorcientoDescuentoTextBox.Text);
+                f.DescuentoPorciento = Convert.ToDouble(PorcientoDescuentoTextBox.Text);
                 f.Impuesto = Convert.ToInt32(ImpuestoTextBox.Text);
                 f.ServicioId = 1;
                 f.NombreCliente = NombreClienteTextBox.Text;
                 f.MontoAdicional = Convert.ToInt32(MontoAdicionalTextBox.Text);
                 f.TipoPago = TipoPagoTextBox.Text;
-                f.Total = Convert.ToDecimal(TotalTextBox.Text);
-                f.SubTotal = Convert.ToDecimal(SubTotalTextBox.Text);
+                f.Total = Convert.ToDouble(TotalTextBox.Text);
+                f.SubTotal = Convert.ToDouble(SubTotalTextBox.Text);
+                f.FacturaId = id;
 
                 if(FacturasBll.Guardar(f))
                 {
@@ -129,7 +133,8 @@ namespace ProyectoFinal
                     ImpuestoTextBox.Text = fact.Impuesto.ToString();
                     DescuentoTextBox.Text = fact.Descuento.ToString();
                     ComentarioRichTextBox.Text = fact.Comentario;
-                    ServiciosDataGridView.DataSource = fact.ServicioId.ToString();
+                    ServiciosDataGridView.DataSource = null;
+                    ServiciosDataGridView.DataSource = fact.Service;
                     TipoPagoTextBox.Text = fact.TipoPago;
                     TotalTextBox.Text = fact.Total.ToString();
                 }
@@ -139,15 +144,12 @@ namespace ProyectoFinal
                 }
             }
         }
-
-        Facturas factura = new Facturas();
+        
         private void AgregarBoton_Click(object sender, EventArgs e)
         {
-            List<Servicios> lista = new List<Servicios>();
-            lista = ServiciosBll.GetLista(Convert.ToInt32(ServiciosComboBox.SelectedValue));
-            factura.Service.AddRange(lista);
+            f.Service.Add(ServiciosBll.Buscar((int)ServiciosComboBox.SelectedValue));
             ServiciosDataGridView.DataSource = null;
-            ServiciosDataGridView.DataSource = factura.Service;
+            ServiciosDataGridView.DataSource = f.Service;
 
             Calcular();
         }
@@ -164,6 +166,7 @@ namespace ProyectoFinal
             ServiciosDataGridView.DataSource = null;
             NombreClienteTextBox.Clear();
             TotalTextBox.Text = 0.00m.ToString();
+            f = new Facturas();
         }
 
         private void NuevoBoton_Click(object sender, EventArgs e)

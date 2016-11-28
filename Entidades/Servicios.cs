@@ -14,7 +14,7 @@ namespace Entidades
         public string TipoServicio { get; set; }
         public int Costo { get; set; }
 
-        public List<Facturas> Facturas { get; set; }
+        public virtual List<Facturas> Facturas { get; set; }
 
         public Servicios()
         {
